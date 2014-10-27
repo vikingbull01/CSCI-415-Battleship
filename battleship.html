@@ -31,6 +31,10 @@
 	{
 		font-family: "Verdana", Times, serif;
 	}
+	.tdBoard
+	{
+		width: 500px;
+	}
 </style>
 </head>
 <script type="text/javascript" src="js/ajaxReq.js"></script>
@@ -912,23 +916,26 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 <br />
 <button id="update">update</button>
 	<div id = "placeholder" style = "background-color:white; width: 200px; height: 10px;"></div>
-	<table  bgcolor="white" border ="1" id = "brd" align = "center">
-		<th class = "square"></th>
-		<th class = "square">A</th>
-		<th class = "square">B</th>
-		<th class = "square">C</th>
-		<th class = "square">D</th>
-		<th class = "square">E</th>
-		<th class = "square">F</th>
-		<th class = "square">G</th>
-		<th class = "square">H</th>
-		<th class = "square">I</th>
-		<th class = "square">J</th>
+	
+<table>
+<tr>
+<td class="tdBoard">
+	<table  bgcolor="white" border ="1" id = "brd">
+		<th class = "square"></th> <!-- Nothing, just a box-->	
+		<th class = "square">A</th> <!-- Just a reference for playing the game-->
+		<th class = "square">B</th><!-- Just a reference for playing the game-->
+		<th class = "square">C</th><!-- Just a reference for playing the game-->
+		<th class = "square">D</th><!-- Just a reference for playing the game-->
+		<th class = "square">E</th><!-- Just a reference for playing the game-->
+		<th class = "square">F</th><!-- Just a reference for playing the game-->
+		<th class = "square">G</th><!-- Just a reference for playing the game-->
+		<th class = "square">H</th><!-- Just a reference for playing the game-->
+		<th class = "square">I</th><!-- Just a reference for playing the game-->
+		<th class = "square">J</th><!-- Just a reference for playing the game-->
 		
 		<tr>
 		
-			<td id="2" class = "square">1</td>
-			
+			<td id="1" class = "square">1</td>	<!-- Just a reference for playing the game-->		
 			<td id="s0" class = "square" ></td>
 			<td id="s1" class = "square" ></td>
 			<td id="s2" class = "square" ></td>
@@ -941,7 +948,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s9" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">2</td>
+			<td id="2" class = "square">2</td> <!-- Just a reference for playing the game-->
 			<td id="s10" class = "square" ></td>
 			<td id="s11" class = "square" ></td>
 			<td id="s12" class = "square" ></td>
@@ -954,7 +961,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s19" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">3</td>
+			<td id="3" class = "square">3</td><!-- Just a reference for playing the game-->	
 			<td id="s20" class = "square" ></td>
 			<td id="s21" class = "square" ></td>
 			<td id="s22" class = "square" ></td>
@@ -967,7 +974,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s29" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">4</td>
+			<td id="4" class = "square">4</td> <!-- Just a reference for playing the game-->
 			<td id="s30" class = "square" ></td>
 			<td id="s31" class = "square" ></td>
 			<td id="s32" class = "square" ></td>
@@ -980,7 +987,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s39" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">5</td>
+			<td id="5" class = "square">5</td> <!-- Just a reference for playing the game-->
 			<td id="s40" class = "square" ></td>
 			<td id="s41" class = "square" ></td>
 			<td id="s42" class = "square" ></td>
@@ -993,7 +1000,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s49" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">6</td>
+			<td id="6" class = "square">6</td> <!-- Just a reference for playing the game-->
 			<td id="s50" class = "square" ></td>
 			<td id="s51" class = "square" ></td>
 			<td id="s52" class = "square" ></td>
@@ -1006,7 +1013,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s59" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">7</td>
+			<td id="7" class = "square">7</td> <!-- Just a reference for playing the game-->
 			<td id="s60" class = "square" ></td>
 			<td id="s61" class = "square" ></td>
 			<td id="s62" class = "square" ></td>
@@ -1019,7 +1026,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s69" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">8</td>
+			<td id="8" class = "square">8</td><!-- Just a reference for playing the game-->	
 			<td id="s70" class = "square" ></td>
 			<td id="s71" class = "square" ></td>
 			<td id="s72" class = "square" ></td>
@@ -1032,7 +1039,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s79" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">9</td>
+			<td id="9" class = "square">9</td> <!-- Just a reference for playing the game-->
 			<td id="s80" class = "square" ></td>
 			<td id="s81" class = "square" ></td>
 			<td id="s82" class = "square" ></td>
@@ -1045,7 +1052,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s89" class = "square" ></td>
 		</tr>
 		<tr>
-		<td id="2" class = "square">10</td>
+			<td id="10" class = "square">10</td> <!-- Just a reference for playing the game-->
 			<td id="s90" class = "square" ></td>
 			<td id="s91" class = "square" ></td>
 			<td id="s92" class = "square" ></td>
@@ -1058,17 +1065,165 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 			<td id="s99" class = "square" ></td>
 		</tr>
 		</table>
-		<br>
-		Send Moves:
+	</td>
+<td class="tdBoard" >
+	<table  bgcolor="white" border ="1" id = "brd" >
+		<th class = "square"></th> <!-- Nothing, just a box-->	
+		<th class = "square">A</th> <!-- Just a reference for playing the game-->
+		<th class = "square">B</th><!-- Just a reference for playing the game-->
+		<th class = "square">C</th><!-- Just a reference for playing the game-->
+		<th class = "square">D</th><!-- Just a reference for playing the game-->
+		<th class = "square">E</th><!-- Just a reference for playing the game-->
+		<th class = "square">F</th><!-- Just a reference for playing the game-->
+		<th class = "square">G</th><!-- Just a reference for playing the game-->
+		<th class = "square">H</th><!-- Just a reference for playing the game-->
+		<th class = "square">I</th><!-- Just a reference for playing the game-->
+		<th class = "square">J</th><!-- Just a reference for playing the game-->
 		
-		<br>
-		<input id="post" type="text" name="" size="35">
+		<tr>
+		
+			<td id="1" class = "square">1</td>	<!-- Just a reference for playing the game-->		
+			<td id="s0" class = "square" ></td>
+			<td id="s1" class = "square" ></td>
+			<td id="s2" class = "square" ></td>
+			<td id="s3" class = "square" ></td>
+			<td id="s4" class = "square" ></td>
+			<td id="s5" class = "square" ></td>
+			<td id="s6" class = "square" ></td>
+			<td id="s7" class = "square" ></td>
+			<td id="s8" class = "square" ></td>
+			<td id="s9" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="2" class = "square">2</td> <!-- Just a reference for playing the game-->
+			<td id="s10" class = "square" ></td>
+			<td id="s11" class = "square" ></td>
+			<td id="s12" class = "square" ></td>
+			<td id="s13" class = "square" ></td>
+			<td id="s14" class = "square" ></td>
+			<td id="s15" class = "square" ></td>
+			<td id="s16" class = "square" ></td>
+			<td id="s17" class = "square" ></td>
+			<td id="s18" class = "square" ></td>
+			<td id="s19" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="3" class = "square">3</td><!-- Just a reference for playing the game-->	
+			<td id="s20" class = "square" ></td>
+			<td id="s21" class = "square" ></td>
+			<td id="s22" class = "square" ></td>
+			<td id="s23" class = "square" ></td>
+			<td id="s24" class = "square" ></td>
+			<td id="s25" class = "square" ></td>
+			<td id="s26" class = "square" ></td>
+			<td id="s27" class = "square" ></td>
+			<td id="s28" class = "square" ></td>
+			<td id="s29" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="4" class = "square">4</td> <!-- Just a reference for playing the game-->
+			<td id="s30" class = "square" ></td>
+			<td id="s31" class = "square" ></td>
+			<td id="s32" class = "square" ></td>
+			<td id="s33" class = "square" ></td>
+			<td id="s34" class = "square" ></td>
+			<td id="s35" class = "square" ></td>
+			<td id="s36" class = "square" ></td>
+			<td id="s37" class = "square" ></td>
+			<td id="s38" class = "square" ></td>
+			<td id="s39" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="5" class = "square">5</td> <!-- Just a reference for playing the game-->
+			<td id="s40" class = "square" ></td>
+			<td id="s41" class = "square" ></td>
+			<td id="s42" class = "square" ></td>
+			<td id="s43" class = "square" ></td>
+			<td id="s44" class = "square" ></td>
+			<td id="s45" class = "square" ></td>
+			<td id="s46" class = "square" ></td>
+			<td id="s47" class = "square" ></td>
+			<td id="s48" class = "square" ></td>
+			<td id="s49" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="6" class = "square">6</td> <!-- Just a reference for playing the game-->
+			<td id="s50" class = "square" ></td>
+			<td id="s51" class = "square" ></td>
+			<td id="s52" class = "square" ></td>
+			<td id="s53" class = "square" ></td>
+			<td id="s54" class = "square" ></td>
+			<td id="s55" class = "square" ></td>
+			<td id="s56" class = "square" ></td>
+			<td id="s57" class = "square" ></td>
+			<td id="s58" class = "square" ></td>
+			<td id="s59" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="7" class = "square">7</td> <!-- Just a reference for playing the game-->
+			<td id="s60" class = "square" ></td>
+			<td id="s61" class = "square" ></td>
+			<td id="s62" class = "square" ></td>
+			<td id="s63" class = "square" ></td>
+			<td id="s64" class = "square" ></td>
+			<td id="s65" class = "square" ></td>
+			<td id="s66" class = "square" ></td>
+			<td id="s67" class = "square" ></td>
+			<td id="s68" class = "square" ></td>
+			<td id="s69" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="8" class = "square">8</td><!-- Just a reference for playing the game-->	
+			<td id="s70" class = "square" ></td>
+			<td id="s71" class = "square" ></td>
+			<td id="s72" class = "square" ></td>
+			<td id="s73" class = "square" ></td>
+			<td id="s74" class = "square" ></td>
+			<td id="s75" class = "square" ></td>
+			<td id="s76" class = "square" ></td>
+			<td id="s77" class = "square" ></td>
+			<td id="s78" class = "square" ></td>
+			<td id="s79" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="9" class = "square">9</td> <!-- Just a reference for playing the game-->
+			<td id="s80" class = "square" ></td>
+			<td id="s81" class = "square" ></td>
+			<td id="s82" class = "square" ></td>
+			<td id="s83" class = "square" ></td>
+			<td id="s84" class = "square" ></td>
+			<td id="s85" class = "square" ></td>
+			<td id="s86" class = "square" ></td>
+			<td id="s87" class = "square" ></td>
+			<td id="s88" class = "square" ></td>
+			<td id="s89" class = "square" ></td>
+		</tr>
+		<tr>
+			<td id="10" class = "square">10</td> <!-- Just a reference for playing the game-->
+			<td id="s90" class = "square" ></td>
+			<td id="s91" class = "square" ></td>
+			<td id="s92" class = "square" ></td>
+			<td id="s93" class = "square" ></td>
+			<td id="s94" class = "square" ></td>
+			<td id="s95" class = "square" ></td>
+			<td id="s96" class = "square" ></td>
+			<td id="s97" class = "square" ></td>
+			<td id="s98" class = "square" ></td>
+			<td id="s99" class = "square" ></td>
+		</tr>
+		</table>
+		
+	</td>
+		
+		
+		
+		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Moves:</h4>
+		
+		<input id="shoot" type="text" name="" size="35">
 		<button type="button" onclick="chatPost()">Fire!</button> 
 	</div>
 	
 	<div id="area"></div>
 	
-	
-
 </body>
 </html>
