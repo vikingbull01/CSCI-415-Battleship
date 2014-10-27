@@ -1,0 +1,1074 @@
+<html>
+<head>
+<style>
+	.square 
+	{
+		width:40px;
+		height:40px;
+		text-align:center;
+		font-size: 18pt;
+		font-weight:bold;
+	}
+	.tablediv 
+	{
+    	border: 2px solid black;
+    	padding: 10px 40px; 
+    	background: gray;
+    	width: 470px;
+    	border-radius: 25px;
+    	margin-left: auto;
+    	margin-right: auto;
+	}
+	.descrip
+	{
+		font-family: "Verdana", Times, serif;
+	}
+	.Title
+	{
+		font-family: "Verdana", Times, serif;
+	}
+	.messages
+	{
+		font-family: "Verdana", Times, serif;
+	}
+</style>
+</head>
+<script type="text/javascript" src="js/ajaxReq.js"></script>
+<script type="text/javascript">
+var cellNumber;
+
+function startGame(){
+
+//Updated upstream
+	for(var i = 0; i < 100; i++)
+
+	//clears the gameboard to start a new game
+	for(var i = 0; i < 100; i++)
+
+		{
+			clearBoard(i);
+		}
+		
+	//if(Math.random() < 0.5)
+	//	{
+		//	click = "2";
+		//}
+//	else
+//		{
+//			click = "1";
+//		}
+	
+	document.winner = null;
+	setMessage("Player "+ click + " gets to start." );
+}
+
+function setMessage(msg)
+{
+	document.getElementById("message").innerText = msg;
+}
+
+function idConversion(targetID)
+{
+	if (targetID == "s0")
+	{
+		cellNumber = 0;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s1")
+	{
+		cellNumber = 1;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s2")
+	{
+		cellNumber = 2;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s3")
+	{
+		cellNumber = 3;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s4")
+	{
+		cellNumber = 4;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s5")
+	{
+		cellNumber = 5;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s6")
+	{
+		cellNumber = 6;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s7")
+	{
+		cellNumber = 7;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s8")
+	{
+		cellNumber = 8;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s9")
+	{
+		cellNumber = 9;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s10")
+	{
+		cellNumber = 10;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s11")
+	{
+		cellNumber = 11;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s12")
+	{
+		cellNumber = 12;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s13")
+	{
+		cellNumber = 13;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s14")
+	{
+		cellNumber = 14;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s15")
+	{
+		cellNumber = 15;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s16")
+	{
+		cellNumber = 16;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s17")
+	{
+		cellNumber = 17;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s18")
+	{
+		cellNumber = 18;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s19")
+	{
+		cellNumber = 19;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s20")
+	{
+		cellNumber = 20;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s21")
+	{
+		cellNumber = 21;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s22")
+	{
+		cellNumber = 22;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s23")
+	{
+		cellNumber = 23;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s24")
+	{
+		cellNumber = 24;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s25")
+	{
+		cellNumber = 25;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s26")
+	{
+		cellNumber = 26;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s27")
+	{
+		cellNumber = 27;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s28")
+	{
+		cellNumber = 28;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s29")
+	{
+		cellNumber = 29;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s30")
+	{
+		cellNumber = 30;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s31")
+	{
+		cellNumber = 31;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s32")
+	{
+		cellNumber = 32;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s33")
+	{
+		cellNumber = 33;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s34")
+	{
+		cellNumber = 34;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s35")
+	{
+		cellNumber = 35;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s36")
+	{
+		cellNumber = 36;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s37")
+	{
+		cellNumber = 37;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s38")
+	{
+		cellNumber = 38;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s39")
+	{
+		cellNumber = 39;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s40")
+	{
+		cellNumber = 40;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s41")
+	{
+		cellNumber = 41;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s42")
+	{
+		cellNumber = 42;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s43")
+	{
+		cellNumber = 43;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s44")
+	{
+		cellNumber = 44;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s45")
+	{
+		cellNumber = 45;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s46")
+	{
+		cellNumber = 46;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s47")
+	{
+		cellNumber = 47;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s48")
+	{
+		cellNumber = 48;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s49")
+	{
+		cellNumber = 49;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s50")
+	{
+		cellNumber = 50;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s51")
+	{
+		cellNumber = 51;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s52")
+	{
+		cellNumber = 52;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s53")
+	{
+		cellNumber = 53;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s54")
+	{
+		cellNumber = 54;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s55")
+	{
+		cellNumber = 55;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s56")
+	{
+		cellNumber = 56;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s57")
+	{
+		cellNumber = 57;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s58")
+	{
+		cellNumber = 58;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s59")
+	{
+		cellNumber = 59;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s60")
+	{
+		cellNumber = 60;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s61")
+	{
+		cellNumber = 61;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s62")
+	{
+		cellNumber = 62;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s63")
+	{
+		cellNumber = 63;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s64")
+	{
+		cellNumber = 64;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s65")
+	{
+		cellNumber = 65;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s66")
+	{
+		cellNumber = 66;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s67")
+	{
+		cellNumber = 67;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s68")
+	{
+		cellNumber = 68;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s69")
+	{
+		cellNumber = 69;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s70")
+	{
+		cellNumber = 70;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s71")
+	{
+		cellNumber = 71;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s72")
+	{
+		cellNumber = 72;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s73")
+	{
+		cellNumber = 73;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s74")
+	{
+		cellNumber = 74;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s75")
+	{
+		cellNumber = 75;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s76")
+	{
+		cellNumber = 76;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s77")
+	{
+		cellNumber = 77;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s78")
+	{
+		cellNumber = 8;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s79")
+	{
+		cellNumber = 79;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s80")
+	{
+		cellNumber = 80;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s81")
+	{
+		cellNumber = 81;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s82")
+	{
+		cellNumber = 82;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s83")
+	{
+		cellNumber = 83;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s84")
+	{
+		cellNumber = 84;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s85")
+	{
+		cellNumber = 85;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s86")
+	{
+		cellNumber = 86;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s87")
+	{
+		cellNumber = 87;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s88")
+	{
+		cellNumber = 88;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s89")
+	{
+		cellNumber = 89;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s90")
+	{
+		cellNumber = 90;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s91")
+	{
+		cellNumber = 91;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s92")
+	{
+		cellNumber = 92;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s93")
+	{
+		cellNumber = 93;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s94")
+	{
+		cellNumber = 94;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s95")
+	{
+		cellNumber = 95;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s96")
+	{
+		cellNumber = 96;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s97")
+	{
+		cellNumber = 97;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s98")
+	{
+		cellNumber = 98;
+		checkWinner(cellNumber);
+	}
+	else if (targetID == "s99")
+	{
+		cellNumber = 99;
+		checkWinner(cellNumber);
+	}
+	
+}
+
+function clearBoard(number)
+{
+    $eid("s" + number).style.backgroundColor = "rgba(0, 0, 0, 0)";
+}
+
+function checkWinner(cellNumber)
+{
+	var totalCounter = 0;
+	totalCounter = checkWestCounter(cellNumber) + checkEastCounter(cellNumber);
+	totalCounter++;
+	//alert("west east counter is " + totalCounter);
+	
+		if (totalCounter >= 5)
+		{
+			document.winner = click;
+			alert("Player " + document.winner + " has won the game!!");
+		}
+		else
+		{
+			totalCounter = checkNorthCounter(cellNumber) + checkSouthCounter(cellNumber);
+			totalCounter++;
+			//alert("north south counter is " + totalCounter);
+			if (totalCounter >= 5)
+			{
+				document.winner = click;
+				alert("Player " + document.winner + " has won the game!!");
+			}
+			else
+			{
+				totalCounter = checkNorthWestCounter(cellNumber) + checkSouthEastCounter(cellNumber);
+				totalCounter++;
+				//alert("northwest southeast counter is " + totalCounter);
+				if (totalCounter >= 5)
+				{
+					document.winner = click;
+					alert(document.winner + " has won the game!!");
+				}
+				else
+				{
+					totalCounter = checkNorthEastCounter(cellNumber) + checkSouthWestCounter(cellNumber);
+					totalCounter++;
+					//alert("northeast southwest counter is " + totalCounter);
+					if (totalCounter >= 5)
+					{
+						document.winner = click;
+						alert("Player " + document.winner + " has won the game!!");
+					}
+				}
+			}
+		}
+}
+
+function checkSouthCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber + 10;
+				
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+				counter++;
+			else
+				return counter;
+		}
+	}
+}
+
+function checkNorthCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber - 10;
+				
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+				counter++;
+			else
+				return counter;
+		}
+	}
+}
+
+function checkWestCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber -1;
+		
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if (cellNumber % 10 < boxValue % 10)
+			{
+				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+					counter++;
+				else
+					return counter;
+			}
+			else
+				return counter;
+		}
+	}
+}
+
+function checkEastCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber +1;
+		
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if (cellNumber % 10 > boxValue % 10)
+			{
+				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+					counter++;
+				else
+					return counter;
+			}
+			else
+				return counter;
+		}
+	}
+}
+
+function checkNorthEastCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber -9;
+		
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if(cellNumber % 10 > boxValue % 10)
+			{
+				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+					counter++;
+				else
+					return counter;
+			}
+			else
+				return counter;
+		}
+	}
+}
+
+function checkSouthWestCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber +9;
+		
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if(cellNumber % 10 < boxValue % 10)
+			{
+				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+					counter++;
+				else
+					return counter;
+			}
+			else
+				return counter;
+		}
+	}
+}
+
+function checkNorthWestCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber -11;
+		
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if(cellNumber % 10 < boxValue % 10)
+			{
+				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+					counter++;
+				else
+					return counter;
+			}
+			else
+				return counter;
+		}
+	}
+}
+
+function checkSouthEastCounter(cellNumber)
+{
+	var	counter = 0,
+		boxValue = cellNumber;
+	for(i = 0; i < 5; i++)
+	{
+		cellNumber = cellNumber +11;
+		
+		if ((cellNumber < 0) || (cellNumber > 99))
+			return counter;
+		else
+		{
+			if(cellNumber % 10 > boxValue % 10)
+			{
+				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
+					counter++;
+				else
+					return counter;
+			}
+			else
+				return counter;
+		}
+	}
+}
+
+function $eid(id)
+{
+return document.getElementById(id);
+}
+//****************************************
+
+var click = 1;
+var targetID;
+
+function cellClick(ev)
+{
+if (ev.target.id == "brd")
+	alert ("Do NOT color outside the lines");
+else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
+   {
+	if(document.winner != null)
+	{
+		alert("Player" + document.winner + " already won the game!!!!")
+	}
+	else if(click==1)
+		{
+   			ev.target.style.backgroundColor = "blue";
+			targetID = ev.target.id;
+			idConversion(targetID);
+          	//click = 2;
+			setMessage("It's Player 2's (Black) move.");
+			$eid("placeholder").style.backgroundColor = "black";
+		}
+	//else if(click==2)
+	//	{
+	//		ev.target.style.backgroundColor = "black";
+	//		targetID = ev.target.id;
+	//		idConversion(targetID);
+	//		click =1; 
+	//		setMessage("It's Player 1's (Blue) move.")
+	//		$eid("placeholder").style.backgroundColor = "blue";
+	//	}
+	}
+	else 
+   		alert("Square is already used");
+}
+
+//****************************************
+window.onload = function()
+{
+$eid("brd").addEventListener('mousedown', cellClick);
+}
+
+//*****************************************
+
+
+// AJAX for the chat
+function chatPost()
+	{
+		var data;
+		data = document.getElementById("post").value;
+                          
+		ajaxRequestPost("Tictacchat.cgi", data, "text/plain", true, 
+		document.getElementById("chatmsg"),document.getElementById("chatmsg"),successFunc, webServerError); 
+	}
+//Game data	
+function TicTacGame()
+	{	
+		var data;
+		data = document.getElementById("post").value;
+                          
+		ajaxRequestPost("boardGame.cgi", data, "text/plain", true, 
+		document.getElementById("brd"),document.getElementById("brd"),successFunc, webServerError); 
+	}
+
+		/*---------------------------------------------------*/	
+
+function webServerError(status, statusText, area)
+	{
+		area.innerHTML = "Web Server Error with status number: " + status + " and Status Text: " + statusText;
+	}
+
+		/*---------------------------------------------------*/
+
+function successFunc(wall, area)
+	{
+		area.innerHTML = wall;
+	}
+
+</script>
+
+<body bgcolor="maroon" onload="startGame()">
+
+<div align="center" class="tablediv"><!-- Aligns all the content in a div with borders.-->
+<h1 class="Title" style="color: white; text-shadow: 2px 2px black" align="center">Realtime Battleship</h1>
+<p class="descrip" align="center" style="color: white; text-shadow: 2px 2px black; font-style: italic;">
+You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the players what color their markers are.-->
+
+<a href="javascript:startGame()"><p align="center"> New Game</p> </a><!-- restarts the game.-->
+<div class="messages" id="message" style="color: white; text-shadow: 2px 2px black" align="center">message</div> 
+<br />
+<button id="update">update</button>
+	<div id = "placeholder" style = "background-color:white; width: 200px; height: 10px;"></div>
+	<table  bgcolor="white" border ="1" id = "brd" align = "center">
+		<th class = "square"></th>
+		<th class = "square">A</th>
+		<th class = "square">B</th>
+		<th class = "square">C</th>
+		<th class = "square">D</th>
+		<th class = "square">E</th>
+		<th class = "square">F</th>
+		<th class = "square">G</th>
+		<th class = "square">H</th>
+		<th class = "square">I</th>
+		<th class = "square">J</th>
+		
+		<tr>
+		
+			<td id="2" class = "square">1</td>
+			
+			<td id="s0" class = "square" ></td>
+			<td id="s1" class = "square" ></td>
+			<td id="s2" class = "square" ></td>
+			<td id="s3" class = "square" ></td>
+			<td id="s4" class = "square" ></td>
+			<td id="s5" class = "square" ></td>
+			<td id="s6" class = "square" ></td>
+			<td id="s7" class = "square" ></td>
+			<td id="s8" class = "square" ></td>
+			<td id="s9" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">2</td>
+			<td id="s10" class = "square" ></td>
+			<td id="s11" class = "square" ></td>
+			<td id="s12" class = "square" ></td>
+			<td id="s13" class = "square" ></td>
+			<td id="s14" class = "square" ></td>
+			<td id="s15" class = "square" ></td>
+			<td id="s16" class = "square" ></td>
+			<td id="s17" class = "square" ></td>
+			<td id="s18" class = "square" ></td>
+			<td id="s19" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">3</td>
+			<td id="s20" class = "square" ></td>
+			<td id="s21" class = "square" ></td>
+			<td id="s22" class = "square" ></td>
+			<td id="s23" class = "square" ></td>
+			<td id="s24" class = "square" ></td>
+			<td id="s25" class = "square" ></td>
+			<td id="s26" class = "square" ></td>
+			<td id="s27" class = "square" ></td>
+			<td id="s28" class = "square" ></td>
+			<td id="s29" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">4</td>
+			<td id="s30" class = "square" ></td>
+			<td id="s31" class = "square" ></td>
+			<td id="s32" class = "square" ></td>
+			<td id="s33" class = "square" ></td>
+			<td id="s34" class = "square" ></td>
+			<td id="s35" class = "square" ></td>
+			<td id="s36" class = "square" ></td>
+			<td id="s37" class = "square" ></td>
+			<td id="s38" class = "square" ></td>
+			<td id="s39" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">5</td>
+			<td id="s40" class = "square" ></td>
+			<td id="s41" class = "square" ></td>
+			<td id="s42" class = "square" ></td>
+			<td id="s43" class = "square" ></td>
+			<td id="s44" class = "square" ></td>
+			<td id="s45" class = "square" ></td>
+			<td id="s46" class = "square" ></td>
+			<td id="s47" class = "square" ></td>
+			<td id="s48" class = "square" ></td>
+			<td id="s49" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">6</td>
+			<td id="s50" class = "square" ></td>
+			<td id="s51" class = "square" ></td>
+			<td id="s52" class = "square" ></td>
+			<td id="s53" class = "square" ></td>
+			<td id="s54" class = "square" ></td>
+			<td id="s55" class = "square" ></td>
+			<td id="s56" class = "square" ></td>
+			<td id="s57" class = "square" ></td>
+			<td id="s58" class = "square" ></td>
+			<td id="s59" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">7</td>
+			<td id="s60" class = "square" ></td>
+			<td id="s61" class = "square" ></td>
+			<td id="s62" class = "square" ></td>
+			<td id="s63" class = "square" ></td>
+			<td id="s64" class = "square" ></td>
+			<td id="s65" class = "square" ></td>
+			<td id="s66" class = "square" ></td>
+			<td id="s67" class = "square" ></td>
+			<td id="s68" class = "square" ></td>
+			<td id="s69" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">8</td>
+			<td id="s70" class = "square" ></td>
+			<td id="s71" class = "square" ></td>
+			<td id="s72" class = "square" ></td>
+			<td id="s73" class = "square" ></td>
+			<td id="s74" class = "square" ></td>
+			<td id="s75" class = "square" ></td>
+			<td id="s76" class = "square" ></td>
+			<td id="s77" class = "square" ></td>
+			<td id="s78" class = "square" ></td>
+			<td id="s79" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">9</td>
+			<td id="s80" class = "square" ></td>
+			<td id="s81" class = "square" ></td>
+			<td id="s82" class = "square" ></td>
+			<td id="s83" class = "square" ></td>
+			<td id="s84" class = "square" ></td>
+			<td id="s85" class = "square" ></td>
+			<td id="s86" class = "square" ></td>
+			<td id="s87" class = "square" ></td>
+			<td id="s88" class = "square" ></td>
+			<td id="s89" class = "square" ></td>
+		</tr>
+		<tr>
+		<td id="2" class = "square">10</td>
+			<td id="s90" class = "square" ></td>
+			<td id="s91" class = "square" ></td>
+			<td id="s92" class = "square" ></td>
+			<td id="s93" class = "square" ></td>
+			<td id="s94" class = "square" ></td>
+			<td id="s95" class = "square" ></td>
+			<td id="s96" class = "square" ></td>
+			<td id="s97" class = "square" ></td>
+			<td id="s98" class = "square" ></td>
+			<td id="s99" class = "square" ></td>
+		</tr>
+		</table>
+		<br>
+		Send Moves:
+		
+		<br>
+		<input id="post" type="text" name="" size="35">
+		<button type="button" onclick="chatPost()">Fire!</button> 
+	</div>
+	
+	<div id="area"></div>
+	
+	
+
+</body>
+</html>
