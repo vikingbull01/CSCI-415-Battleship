@@ -14,7 +14,7 @@
     	border: 2px solid black;
     	padding: 10px 40px; 
     	background: gray;
-    	width: 470px;
+    	width: 1000px;
     	border-radius: 25px;
     	margin-left: auto;
     	margin-right: auto;
@@ -53,14 +53,14 @@ function startGame(){
 			clearBoard(i);
 		}
 		
-	//if(Math.random() < 0.5)
-	//	{
-		//	click = "2";
-		//}
-//	else
-//		{
-//			click = "1";
-//		}
+	if(Math.random() < 0.5)
+		{
+			click = "2";
+		}
+	else
+		{
+			click = "1";
+		}
 	
 	document.winner = null;
 	setMessage("Player "+ click + " gets to start." );
@@ -823,7 +823,8 @@ function $eid(id)
 return document.getElementById(id);
 }
 //****************************************
-
+//left board, blue
+//****************************************
 var click = 1;
 var targetID;
 
@@ -867,7 +868,49 @@ $eid("brd").addEventListener('mousedown', cellClick);
 }
 
 //*****************************************
+//black board, board on the right
+//*****************************************
 
+function cellClick(ev)
+{
+if (ev.target.id == "brd2")
+	alert ("Do NOT color outside the lines");
+else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
+   {
+	if(document.winner != null)
+	{
+		alert("Player" + document.winner + " already won the game!!!!")
+	}
+	else if(click==1)
+		{
+   			ev.target.style.backgroundColor = "blue";
+			targetID = ev.target.id;
+			idConversion(targetID);
+          	//click = 2;
+			setMessage("It's Player 2's (Black) move.");
+			$eid("placeholder").style.backgroundColor = "black";
+		}
+	//else if(click==2)
+	//	{
+	//		ev.target.style.backgroundColor = "black";
+	//		targetID = ev.target.id;
+	//		idConversion(targetID);
+	//		click =1; 
+	//		setMessage("It's Player 1's (Blue) move.")
+	//		$eid("placeholder").style.backgroundColor = "blue";
+	//	}
+	}
+	else 
+   		alert("Square is already used");
+}
+
+//****************************************
+window.onload = function()
+{
+$eid("brd2").addEventListener('mousedown', cellClick);
+}
+
+//*********************
 
 // AJAX for the chat
 function chatPost()
@@ -906,10 +949,10 @@ function successFunc(wall, area)
 
 <body bgcolor="maroon" onload="startGame()">
 
-<div align="center" class="tablediv"><!-- Aligns all the content in a div with borders.-->
+<div  class="tablediv"><!-- Aligns all the content in a div with borders.-->
 <h1 class="Title" style="color: white; text-shadow: 2px 2px black" align="center">Realtime Battleship</h1>
 <p class="descrip" align="center" style="color: white; text-shadow: 2px 2px black; font-style: italic;">
-You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the players what color their markers are.-->
+Left Board = Black | Right Board = Blue </p> <!-- Tells the players what color their markers are.-->
 
 <a href="javascript:startGame()"><p align="center"> New Game</p> </a><!-- restarts the game.-->
 <div class="messages" id="message" style="color: white; text-shadow: 2px 2px black" align="center">message</div> 
@@ -920,7 +963,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 <table>
 <tr>
 <td class="tdBoard">
-	<table  bgcolor="white" border ="1" id = "brd">
+	<table  bgcolor="white" style="width:500px;" border ="1" id = "brd">
 		<th class = "square"></th> <!-- Nothing, just a box-->	
 		<th class = "square">A</th> <!-- Just a reference for playing the game-->
 		<th class = "square">B</th><!-- Just a reference for playing the game-->
@@ -1067,7 +1110,7 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 		</table>
 	</td>
 <td class="tdBoard" >
-	<table  bgcolor="white" border ="1" id = "brd" >
+	<table  bgcolor="white" border ="1" style="width:500px;" id = "brd2">
 		<th class = "square"></th> <!-- Nothing, just a box-->	
 		<th class = "square">A</th> <!-- Just a reference for playing the game-->
 		<th class = "square">B</th><!-- Just a reference for playing the game-->
@@ -1214,12 +1257,14 @@ You are Blue, when you get hit, your space will turn red. </p> <!-- Tells the pl
 		</table>
 		
 	</td>
+</tr>
+</table>
 		
 		
 		
 		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Moves:</h4>
 		
-		<input id="shoot" type="text" name="" size="35">
+		<input id="shoot" type="text"  name="" size="35">
 		<button type="button" onclick="chatPost()">Fire!</button> 
 	</div>
 	
