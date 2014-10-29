@@ -11,7 +11,7 @@
 #include "sqltdb.hpp"
 using namespace std;
 
-int refresh(string newField)//fireboard
+int refresh(string FireBoard)//fireboard
 {
 string userName, userPass;
 int nRows, nCols;
@@ -19,7 +19,7 @@ sqltWrap db;
 
 db.open("battleshiphist");
 
-if (db.doCommand("SELECT Player1Ships,Player2Ships, Player1Fire, Player2Fire FROM BattleshipHist WHERE newField = '"+ newField +"'") == DB_SUCCESS) 
+if (db.doCommand("SELECT Player1Hist.Player1Ships,Player2Ships, Player1Hist.Player1Fire, Player2Fire FROM Player1Hist,Player2Hist WHERE newField = '"+ newField +"'") == DB_SUCCESS) 
   {  	
   nRows = db.numRows();
   cout << "SUCCESS" << endl;
@@ -53,15 +53,15 @@ vector<string> messages;
 
 cout << "Content-Type: text/plain\n\n";
 
-db.open("chatsiteDATABASE");
+db.open("battleshiphist");
 
 getline(cin,skey);
 getline(cin,userName);
 getline(cin,newField);
 getline(cin,post);
 
-
-if (db.doCommand("insert into messages (userID, message,newField) values ('" + userName + "','" + post + "','"+ newField +"')") == DB_SUCCESS) 
+//player1HistoryINSERTS
+if (db.doCommand("INSERT INTO Player1Hist (Player1Ships, Player1Fire) VALUES ('" + p1ships + "','" + p1fire + "')") == DB_SUCCESS) 
   {
    // cout << "SUCCESS\nDebugging test.............................................\n" << endl;
      
@@ -72,7 +72,19 @@ if (db.doCommand("insert into messages (userID, message,newField) values ('" + u
    	 exit(0);
     }
     
-refresh(newField);
+//player2HistoryINSERTS
+if (db.doCommand("INSERT INTO Player1Hist (Player1Ships, Player1Fire) VALUES ('" + p1ships + "','" + p1fire + "')") == DB_SUCCESS) 
+  {
+   // cout << "SUCCESS\nDebugging test.............................................\n" << endl;
+     
+  }
+  else
+   	{
+   	 cout << "ERROR\nThere was a problem with our database. Try again later.1" << endl;
+   	 exit(0);
+    }
+    
+refresh(FireBoard);
 
 return 0;
 }
