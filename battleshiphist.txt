@@ -1,0 +1,7 @@
+CREATE TABLE BattleshipHist
+(
+	Player1Ships varchar(4),
+	Player1Fire varchar(4),
+	Player2Ships varchar(4),
+	PLayer2Fire varchar(4);
+);
