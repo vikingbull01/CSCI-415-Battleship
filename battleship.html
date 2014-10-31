@@ -37,9 +37,16 @@
 	}
 </style>
 </head>
-<script type="text/javascript" src="js/ajaxReq.js"></script>
 <script type="text/javascript">
 var cellNumber;
+var north = (cellNumber - 30);
+var south = (cellNumber + 30);
+var west = (cellNumber - 3);
+var east = (cellNumber + 3);
+var northwest = (cellNumber - 33);
+var northeast = (cellNumber - 27);
+var southwest = (cellNumber + 27);
+var southeast = (cellNumber + 33);
 
 function startGame(){
 
@@ -53,17 +60,9 @@ function startGame(){
 			clearBoard(i);
 		}
 		
-	if(Math.random() < 0.5)
-		{
-			click = "2";
-		}
-	else
-		{
-			click = "1";
-		}
 	
 	document.winner = null;
-	setMessage("Player "+ click + " gets to start." );
+	setMessage("You have 60 seconds to place your ships!!! \n GO!!!!" );
 }
 
 function setMessage(msg)
@@ -73,749 +72,1341 @@ function setMessage(msg)
 
 function idConversion(targetID)
 {
+	if (targetID == "m0")
+	{
+		cellNumber = 0;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m1")
+	{
+		cellNumber = 1;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m2")
+	{
+		cellNumber = 2;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m3")
+	{
+		cellNumber = 3;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m4")
+	{
+		cellNumber = 4;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m5")
+	{
+		cellNumber = 5;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m6")
+	{
+		cellNumber = 6;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m7")
+	{
+		cellNumber = 7;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m8")
+	{
+		cellNumber = 8;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m9")
+	{
+		cellNumber = 9;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m10")
+	{
+		cellNumber = 10;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m11")
+	{
+		cellNumber = 11;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m12")
+	{
+		cellNumber = 12;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m13")
+	{
+		cellNumber = 13;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m14")
+	{
+		cellNumber = 14;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m15")
+	{
+		cellNumber = 15;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m16")
+	{
+		cellNumber = 16;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m17")
+	{
+		cellNumber = 17;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m18")
+	{
+		cellNumber = 18;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m19")
+	{
+		cellNumber = 19;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m20")
+	{
+		cellNumber = 20;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m21")
+	{
+		cellNumber = 21;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m22")
+	{
+		cellNumber = 22;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m23")
+	{
+		cellNumber = 23;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m24")
+	{
+		cellNumber = 24;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m25")
+	{
+		cellNumber = 25;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m26")
+	{
+		cellNumber = 26;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m27")
+	{
+		cellNumber = 27;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m28")
+	{
+		cellNumber = 28;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m29")
+	{
+		cellNumber = 29;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m30")
+	{
+		cellNumber = 30;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m31")
+	{
+		cellNumber = 31;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m32")
+	{
+		cellNumber = 32;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m33")
+	{
+		cellNumber = 33;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m34")
+	{
+		cellNumber = 34;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m35")
+	{
+		cellNumber = 35;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m36")
+	{
+		cellNumber = 36;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m37")
+	{
+		cellNumber = 37;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m38")
+	{
+		cellNumber = 38;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m39")
+	{
+		cellNumber = 39;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m40")
+	{
+		cellNumber = 40;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m41")
+	{
+		cellNumber = 41;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m42")
+	{
+		cellNumber = 42;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m43")
+	{
+		cellNumber = 43;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m44")
+	{
+		cellNumber = 44;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m45")
+	{
+		cellNumber = 45;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m46")
+	{
+		cellNumber = 46;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m47")
+	{
+		cellNumber = 47;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m48")
+	{
+		cellNumber = 48;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m49")
+	{
+		cellNumber = 49;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m50")
+	{
+		cellNumber = 50;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m51")
+	{
+		cellNumber = 51;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m52")
+	{
+		cellNumber = 52;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m53")
+	{
+		cellNumber = 53;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m54")
+	{
+		cellNumber = 54;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m55")
+	{
+		cellNumber = 55;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m56")
+	{
+		cellNumber = 56;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m57")
+	{
+		cellNumber = 57;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m58")
+	{
+		cellNumber = 58;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m59")
+	{
+		cellNumber = 59;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m60")
+	{
+		cellNumber = 60;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m61")
+	{
+		cellNumber = 61;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m62")
+	{
+		cellNumber = 62;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m63")
+	{
+		cellNumber = 63;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m64")
+	{
+		cellNumber = 64;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m65")
+	{
+		cellNumber = 65;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m66")
+	{
+		cellNumber = 66;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m67")
+	{
+		cellNumber = 67;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m68")
+	{
+		cellNumber = 68;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m69")
+	{
+		cellNumber = 69;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m70")
+	{
+		cellNumber = 70;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m71")
+	{
+		cellNumber = 71;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m72")
+	{
+		cellNumber = 72;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m73")
+	{
+		cellNumber = 73;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m74")
+	{
+		cellNumber = 74;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m75")
+	{
+		cellNumber = 75;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m76")
+	{
+		cellNumber = 76;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m77")
+	{
+		cellNumber = 77;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m78")
+	{
+		cellNumber = 78;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m79")
+	{
+		cellNumber = 79;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m80")
+	{
+		cellNumber = 80;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m81")
+	{
+		cellNumber = 81;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m82")
+	{
+		cellNumber = 82;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m83")
+	{
+		cellNumber = 83;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m84")
+	{
+		cellNumber = 84;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m85")
+	{
+		cellNumber = 85;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m86")
+	{
+		cellNumber = 86;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m87")
+	{
+		cellNumber = 87;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m88")
+	{
+		cellNumber = 88;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m89")
+	{
+		cellNumber = 89;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m90")
+	{
+		cellNumber = 90;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m91")
+	{
+		cellNumber = 91;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m92")
+	{
+		cellNumber = 92;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m93")
+	{
+		cellNumber = 93;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m94")
+	{
+		cellNumber = 94;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m95")
+	{
+		cellNumber = 95;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m96")
+	{
+		cellNumber = 96;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m97")
+	{
+		cellNumber = 97;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m98")
+	{
+		cellNumber = 98;
+		sendShots(cellNumber);
+	}
+	else if (targetID == "m99")
+	{
+		cellNumber = 99;
+		sendShots(cellNumber);
+	}	
+}
+
+function sendShots(cellNumber)
+{
+	$eid("s" + cellNumber).style.backgroundColor = "red";
+}
+
+function idConversion2(targetID)
+{
 	if (targetID == "s0")
 	{
 		cellNumber = 0;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s1")
 	{
 		cellNumber = 1;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s2")
 	{
 		cellNumber = 2;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s3")
 	{
 		cellNumber = 3;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s4")
 	{
 		cellNumber = 4;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s5")
 	{
 		cellNumber = 5;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s6")
 	{
 		cellNumber = 6;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s7")
 	{
 		cellNumber = 7;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s8")
 	{
 		cellNumber = 8;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s9")
 	{
 		cellNumber = 9;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s10")
 	{
 		cellNumber = 10;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s11")
 	{
 		cellNumber = 11;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s12")
 	{
 		cellNumber = 12;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s13")
 	{
 		cellNumber = 13;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s14")
 	{
 		cellNumber = 14;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s15")
 	{
 		cellNumber = 15;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s16")
 	{
 		cellNumber = 16;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s17")
 	{
 		cellNumber = 17;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s18")
 	{
 		cellNumber = 18;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s19")
 	{
 		cellNumber = 19;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s20")
 	{
 		cellNumber = 20;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s21")
 	{
 		cellNumber = 21;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s22")
 	{
 		cellNumber = 22;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s23")
 	{
 		cellNumber = 23;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s24")
 	{
 		cellNumber = 24;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s25")
 	{
 		cellNumber = 25;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s26")
 	{
 		cellNumber = 26;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s27")
 	{
 		cellNumber = 27;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s28")
 	{
 		cellNumber = 28;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s29")
 	{
 		cellNumber = 29;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s30")
 	{
 		cellNumber = 30;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s31")
 	{
 		cellNumber = 31;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s32")
 	{
 		cellNumber = 32;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s33")
 	{
 		cellNumber = 33;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s34")
 	{
 		cellNumber = 34;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s35")
 	{
 		cellNumber = 35;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s36")
 	{
 		cellNumber = 36;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s37")
 	{
 		cellNumber = 37;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s38")
 	{
 		cellNumber = 38;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s39")
 	{
 		cellNumber = 39;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s40")
 	{
 		cellNumber = 40;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s41")
 	{
 		cellNumber = 41;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s42")
 	{
 		cellNumber = 42;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s43")
 	{
 		cellNumber = 43;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s44")
 	{
 		cellNumber = 44;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s45")
 	{
 		cellNumber = 45;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s46")
 	{
 		cellNumber = 46;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s47")
 	{
 		cellNumber = 47;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s48")
 	{
 		cellNumber = 48;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s49")
 	{
 		cellNumber = 49;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s50")
 	{
 		cellNumber = 50;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s51")
 	{
 		cellNumber = 51;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s52")
 	{
 		cellNumber = 52;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s53")
 	{
 		cellNumber = 53;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s54")
 	{
 		cellNumber = 54;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s55")
 	{
 		cellNumber = 55;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s56")
 	{
 		cellNumber = 56;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s57")
 	{
 		cellNumber = 57;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s58")
 	{
 		cellNumber = 58;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s59")
 	{
 		cellNumber = 59;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s60")
 	{
 		cellNumber = 60;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s61")
 	{
 		cellNumber = 61;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s62")
 	{
 		cellNumber = 62;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s63")
 	{
 		cellNumber = 63;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s64")
 	{
 		cellNumber = 64;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s65")
 	{
 		cellNumber = 65;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s66")
 	{
 		cellNumber = 66;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s67")
 	{
 		cellNumber = 67;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s68")
 	{
 		cellNumber = 68;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s69")
 	{
 		cellNumber = 69;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s70")
 	{
 		cellNumber = 70;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s71")
 	{
 		cellNumber = 71;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s72")
 	{
 		cellNumber = 72;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s73")
 	{
 		cellNumber = 73;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s74")
 	{
 		cellNumber = 74;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s75")
 	{
 		cellNumber = 75;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s76")
 	{
 		cellNumber = 76;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s77")
 	{
 		cellNumber = 77;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s78")
 	{
-		cellNumber = 8;
-		checkWinner(cellNumber);
+		cellNumber = 78;
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s79")
 	{
 		cellNumber = 79;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s80")
 	{
 		cellNumber = 80;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s81")
 	{
 		cellNumber = 81;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s82")
 	{
 		cellNumber = 82;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s83")
 	{
 		cellNumber = 83;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s84")
 	{
 		cellNumber = 84;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s85")
 	{
 		cellNumber = 85;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s86")
 	{
 		cellNumber = 86;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s87")
 	{
 		cellNumber = 87;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s88")
 	{
 		cellNumber = 88;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s89")
 	{
 		cellNumber = 89;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s90")
 	{
 		cellNumber = 90;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s91")
 	{
 		cellNumber = 91;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s92")
 	{
 		cellNumber = 92;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s93")
 	{
 		cellNumber = 93;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s94")
 	{
 		cellNumber = 94;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s95")
 	{
 		cellNumber = 95;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s96")
 	{
 		cellNumber = 96;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s97")
 	{
 		cellNumber = 97;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s98")
 	{
 		cellNumber = 98;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	else if (targetID == "s99")
 	{
 		cellNumber = 99;
-		checkWinner(cellNumber);
+		seeMoves(cellNumber);
 	}
 	
+}
+
+function seeMoves(cellNumber)
+{
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);
+
+	$eid("s" + cellNumber).style.backgroundColor = "gray";
+	$eid("s" + north).style.backgroundColor = "lightgray";
+	$eid("s" + south).style.backgroundColor = "lightgray";
+	$eid("s" + east).style.backgroundColor = "lightgray";
+	$eid("s" + west).style.backgroundColor = "lightgray";
+	$eid("s" + northwest).style.backgroundColor = "lightgray";
+	$eid("s" + northeast).style.backgroundColor = "lightgray";
+	$eid("s" + southwest).style.backgroundColor = "lightgray";
+	$eid("s" + southeast).style.backgroundColor = "lightgray";
+		$eid("brd").removeEventListener('mousedown', placeShipStart);
+		$eid("s" + north).addEventListener('mousedown', setShipNorth);
+		$eid("s" + south).addEventListener('mousedown', setShipSouth);
+		$eid("s" + west).addEventListener('mousedown', setShipWest);
+		$eid("s" + east).addEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).addEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).addEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).addEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).addEventListener('mousedown', setShipSouthEast);
+}
+
+function setShipNorth(ev)
+{
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber += 30;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber - 10)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 20)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 30)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function setShipSouth(ev)
+{
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber -= 30;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber + 10)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 20)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 30)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}	
+
+function setShipWest(ev)
+{
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber += 3;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);	
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber - 1)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 2)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 3)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function setShipEast(ev)
+{	
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber -= 3;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber + 1)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 2)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 3)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function setShipNorthWest(ev)
+{	
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber += 33;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber - 11)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 22)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 33)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function setShipNorthEast(ev)
+{	
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber += 27;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);	
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber - 9)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 18)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber - 27)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function setShipSouthEast(ev)
+{	
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber -= 33;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);	
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber + 11)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 22)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 33)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function setShipSouthWest(ev)
+{	
+	var str = ev.target.id;
+	var cellString = str.substr(1);
+	var cellNumber = parseFloat(cellString);
+	cellNumber -= 27;
+	var north = (cellNumber - 30);
+	var south = (cellNumber + 30);
+	var west = (cellNumber - 3);
+	var east = (cellNumber + 3);
+	var northwest = (cellNumber - 33);
+	var northeast = (cellNumber - 27);
+	var southwest = (cellNumber + 27);
+	var southeast = (cellNumber + 33);	
+		$eid("s" + north).style.backgroundColor = "white";
+		$eid("s" + south).style.backgroundColor = "white";
+		$eid("s" + east).style.backgroundColor = "white";
+		$eid("s" + west).style.backgroundColor = "white";
+		$eid("s" + northwest).style.backgroundColor = "white";
+		$eid("s" + northeast).style.backgroundColor = "white";
+		$eid("s" + southwest).style.backgroundColor = "white";
+		$eid("s" + southeast).style.backgroundColor = "white";
+		$eid("s" + (cellNumber + 9)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 18)).style.backgroundColor = "gray";
+		$eid("s" + (cellNumber + 27)).style.backgroundColor = "gray";
+		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		$eid("s" + west).removeEventListener('mousedown', setShipWest);
+		$eid("s" + east).removeEventListener('mousedown', setShipEast);
+		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+		$eid("brd").addEventListener('mousedown', placeShipStart);
 }
 
 function clearBoard(number)
 {
     $eid("s" + number).style.backgroundColor = "rgba(0, 0, 0, 0)";
-}
-
-function checkWinner(cellNumber)
-{
-	var totalCounter = 0;
-	totalCounter = checkWestCounter(cellNumber) + checkEastCounter(cellNumber);
-	totalCounter++;
-	//alert("west east counter is " + totalCounter);
-	
-		if (totalCounter >= 5)
-		{
-			document.winner = click;
-			alert("Player " + document.winner + " has won the game!!");
-		}
-		else
-		{
-			totalCounter = checkNorthCounter(cellNumber) + checkSouthCounter(cellNumber);
-			totalCounter++;
-			//alert("north south counter is " + totalCounter);
-			if (totalCounter >= 5)
-			{
-				document.winner = click;
-				alert("Player " + document.winner + " has won the game!!");
-			}
-			else
-			{
-				totalCounter = checkNorthWestCounter(cellNumber) + checkSouthEastCounter(cellNumber);
-				totalCounter++;
-				//alert("northwest southeast counter is " + totalCounter);
-				if (totalCounter >= 5)
-				{
-					document.winner = click;
-					alert(document.winner + " has won the game!!");
-				}
-				else
-				{
-					totalCounter = checkNorthEastCounter(cellNumber) + checkSouthWestCounter(cellNumber);
-					totalCounter++;
-					//alert("northeast southwest counter is " + totalCounter);
-					if (totalCounter >= 5)
-					{
-						document.winner = click;
-						alert("Player " + document.winner + " has won the game!!");
-					}
-				}
-			}
-		}
-}
-
-function checkSouthCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber + 10;
-				
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-				counter++;
-			else
-				return counter;
-		}
-	}
-}
-
-function checkNorthCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber - 10;
-				
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-				counter++;
-			else
-				return counter;
-		}
-	}
-}
-
-function checkWestCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber -1;
-		
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if (cellNumber % 10 < boxValue % 10)
-			{
-				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-					counter++;
-				else
-					return counter;
-			}
-			else
-				return counter;
-		}
-	}
-}
-
-function checkEastCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber +1;
-		
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if (cellNumber % 10 > boxValue % 10)
-			{
-				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-					counter++;
-				else
-					return counter;
-			}
-			else
-				return counter;
-		}
-	}
-}
-
-function checkNorthEastCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber -9;
-		
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if(cellNumber % 10 > boxValue % 10)
-			{
-				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-					counter++;
-				else
-					return counter;
-			}
-			else
-				return counter;
-		}
-	}
-}
-
-function checkSouthWestCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber +9;
-		
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if(cellNumber % 10 < boxValue % 10)
-			{
-				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-					counter++;
-				else
-					return counter;
-			}
-			else
-				return counter;
-		}
-	}
-}
-
-function checkNorthWestCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber -11;
-		
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if(cellNumber % 10 < boxValue % 10)
-			{
-				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-					counter++;
-				else
-					return counter;
-			}
-			else
-				return counter;
-		}
-	}
-}
-
-function checkSouthEastCounter(cellNumber)
-{
-	var	counter = 0,
-		boxValue = cellNumber;
-	for(i = 0; i < 5; i++)
-	{
-		cellNumber = cellNumber +11;
-		
-		if ((cellNumber < 0) || (cellNumber > 99))
-			return counter;
-		else
-		{
-			if(cellNumber % 10 > boxValue % 10)
-			{
-				if($eid("s" + cellNumber).style.backgroundColor == $eid("placeholder").style.backgroundColor)
-					counter++;
-				else
-					return counter;
-			}
-			else
-				return counter;
-		}
-	}
+	$eid("m" + number).style.backgroundColor = "rgba(0, 0, 0, 0)";
 }
 
 function $eid(id)
@@ -830,78 +1421,23 @@ var targetID;
 
 function cellClick(ev)
 {
-if (ev.target.id == "brd")
-	alert ("Do NOT color outside the lines");
-else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
-   {
-	if(document.winner != null)
-	{
-		alert("Player" + document.winner + " already won the game!!!!")
-	}
-	else if(click==1)
-		{
-   			ev.target.style.backgroundColor = "blue";
-			targetID = ev.target.id;
-			idConversion(targetID);
-          	//click = 2;
-			setMessage("It's Player 2's (Black) move.");
-			$eid("placeholder").style.backgroundColor = "black";
-		}
-	//else if(click==2)
-	//	{
-	//		ev.target.style.backgroundColor = "black";
-	//		targetID = ev.target.id;
-	//		idConversion(targetID);
-	//		click =1; 
-	//		setMessage("It's Player 1's (Blue) move.")
-	//		$eid("placeholder").style.backgroundColor = "blue";
-	//	}
-	}
-	else 
-   		alert("Square is already used");
-}
-
-//****************************************
-window.onload = function()
-{
-$eid("brd").addEventListener('mousedown', cellClick);
-}
-
-//*****************************************
-//black board, board on the right
-//*****************************************
-
-function cellClick(ev)
-{
 if (ev.target.id == "brd2")
-	alert ("Do NOT color outside the lines");
+	alert ("You aren't going to hit anything there!!");
 else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
    {
 	if(document.winner != null)
 	{
 		alert("Player" + document.winner + " already won the game!!!!")
 	}
-	else if(click==1)
+	else
 		{
    			ev.target.style.backgroundColor = "blue";
 			targetID = ev.target.id;
 			idConversion(targetID);
-          	//click = 2;
-			setMessage("It's Player 2's (Black) move.");
-			$eid("placeholder").style.backgroundColor = "black";
 		}
-	//else if(click==2)
-	//	{
-	//		ev.target.style.backgroundColor = "black";
-	//		targetID = ev.target.id;
-	//		idConversion(targetID);
-	//		click =1; 
-	//		setMessage("It's Player 1's (Blue) move.")
-	//		$eid("placeholder").style.backgroundColor = "blue";
-	//	}
 	}
 	else 
-   		alert("Square is already used");
+   		alert("You already shot there!!!");
 }
 
 //****************************************
@@ -912,8 +1448,33 @@ $eid("brd2").addEventListener('mousedown', cellClick);
 
 //*********************
 
+
+function placeShips()
+{
+	$eid("brd").addEventListener('mousedown', placeShipStart);
+}
+
+function placeShipStart(ev)
+{
+	if (ev.target.id == "brd")
+		alert ("You can't place a ship there!!");
+	else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
+	{
+		if(document.winner != null)
+		{
+			alert("Player" + document.winner + " already won the game!!!!")
+		}
+		else
+		{
+   			ev.target.style.backgroundColor = "gray";
+			targetID = ev.target.id;
+			idConversion2(targetID);
+		}
+	}
+}
 // AJAX for the chat
-function chatPost()
+/*******************************************************************
+function placeShips()
 	{
 		var data;
 		data = document.getElementById("post").value;
@@ -921,28 +1482,13 @@ function chatPost()
 		ajaxRequestPost("Tictacchat.cgi", data, "text/plain", true, 
 		document.getElementById("chatmsg"),document.getElementById("chatmsg"),successFunc, webServerError); 
 	}
-//Game data	
-function TicTacGame()
-	{	
-		var data;
-		data = document.getElementById("post").value;
-                          
-		ajaxRequestPost("boardGame.cgi", data, "text/plain", true, 
-		document.getElementById("brd"),document.getElementById("brd"),successFunc, webServerError); 
-	}
-
+	
+	*******************************************************************/
 		/*---------------------------------------------------*/	
 
 function webServerError(status, statusText, area)
 	{
 		area.innerHTML = "Web Server Error with status number: " + status + " and Status Text: " + statusText;
-	}
-
-		/*---------------------------------------------------*/
-
-function successFunc(wall, area)
-	{
-		area.innerHTML = wall;
 	}
 
 </script>
@@ -952,18 +1498,17 @@ function successFunc(wall, area)
 <div  class="tablediv"><!-- Aligns all the content in a div with borders.-->
 <h1 class="Title" style="color: white; text-shadow: 2px 2px black" align="center">Realtime Battleship</h1>
 <p class="descrip" align="center" style="color: white; text-shadow: 2px 2px black; font-style: italic;">
-Left Board = Black | Right Board = Blue </p> <!-- Tells the players what color their markers are.-->
+Left Board = Your Ships | Right Board = Your Attacks </p> <!-- Tells the players what color their markers are.-->
 
 <a href="javascript:startGame()"><p align="center"> New Game</p> </a><!-- restarts the game.-->
 <div class="messages" id="message" style="color: white; text-shadow: 2px 2px black" align="center">message</div> 
 <br />
 <button id="update">update</button>
-	<div id = "placeholder" style = "background-color:white; width: 200px; height: 10px;"></div>
 	
 <table>
 <tr>
 <td class="tdBoard">
-	<table  bgcolor="white" style="width:500px;" border ="1" id = "brd">
+	<table  bgcolor="white" border ="1" style="width:500px;" id = "brd">
 		<th class = "square"></th> <!-- Nothing, just a box-->	
 		<th class = "square">A</th> <!-- Just a reference for playing the game-->
 		<th class = "square">B</th><!-- Just a reference for playing the game-->
@@ -1126,153 +1671,145 @@ Left Board = Black | Right Board = Blue </p> <!-- Tells the players what color t
 		<tr>
 		
 			<td id="1" class = "square">1</td>	<!-- Just a reference for playing the game-->		
-			<td id="s0" class = "square" ></td>
-			<td id="s1" class = "square" ></td>
-			<td id="s2" class = "square" ></td>
-			<td id="s3" class = "square" ></td>
-			<td id="s4" class = "square" ></td>
-			<td id="s5" class = "square" ></td>
-			<td id="s6" class = "square" ></td>
-			<td id="s7" class = "square" ></td>
-			<td id="s8" class = "square" ></td>
-			<td id="s9" class = "square" ></td>
+			<td id="m0" class = "square" ></td>
+			<td id="m1" class = "square" ></td>
+			<td id="m2" class = "square" ></td>
+			<td id="m3" class = "square" ></td>
+			<td id="m4" class = "square" ></td>
+			<td id="m5" class = "square" ></td>
+			<td id="m6" class = "square" ></td>
+			<td id="m7" class = "square" ></td>
+			<td id="m8" class = "square" ></td>
+			<td id="m9" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="2" class = "square">2</td> <!-- Just a reference for playing the game-->
-			<td id="s10" class = "square" ></td>
-			<td id="s11" class = "square" ></td>
-			<td id="s12" class = "square" ></td>
-			<td id="s13" class = "square" ></td>
-			<td id="s14" class = "square" ></td>
-			<td id="s15" class = "square" ></td>
-			<td id="s16" class = "square" ></td>
-			<td id="s17" class = "square" ></td>
-			<td id="s18" class = "square" ></td>
-			<td id="s19" class = "square" ></td>
+			<td id="m10" class = "square" ></td>
+			<td id="m11" class = "square" ></td>
+			<td id="m12" class = "square" ></td>
+			<td id="m13" class = "square" ></td>
+			<td id="m14" class = "square" ></td>
+			<td id="m15" class = "square" ></td>
+			<td id="m16" class = "square" ></td>
+			<td id="m17" class = "square" ></td>
+			<td id="m18" class = "square" ></td>
+			<td id="m19" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="3" class = "square">3</td><!-- Just a reference for playing the game-->	
-			<td id="s20" class = "square" ></td>
-			<td id="s21" class = "square" ></td>
-			<td id="s22" class = "square" ></td>
-			<td id="s23" class = "square" ></td>
-			<td id="s24" class = "square" ></td>
-			<td id="s25" class = "square" ></td>
-			<td id="s26" class = "square" ></td>
-			<td id="s27" class = "square" ></td>
-			<td id="s28" class = "square" ></td>
-			<td id="s29" class = "square" ></td>
+			<td id="m20" class = "square" ></td>
+			<td id="m21" class = "square" ></td>
+			<td id="m22" class = "square" ></td>
+			<td id="m23" class = "square" ></td>
+			<td id="m24" class = "square" ></td>
+			<td id="m25" class = "square" ></td>
+			<td id="m26" class = "square" ></td>
+			<td id="m27" class = "square" ></td>
+			<td id="m28" class = "square" ></td>
+			<td id="m29" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="4" class = "square">4</td> <!-- Just a reference for playing the game-->
-			<td id="s30" class = "square" ></td>
-			<td id="s31" class = "square" ></td>
-			<td id="s32" class = "square" ></td>
-			<td id="s33" class = "square" ></td>
-			<td id="s34" class = "square" ></td>
-			<td id="s35" class = "square" ></td>
-			<td id="s36" class = "square" ></td>
-			<td id="s37" class = "square" ></td>
-			<td id="s38" class = "square" ></td>
-			<td id="s39" class = "square" ></td>
+			<td id="m30" class = "square" ></td>
+			<td id="m31" class = "square" ></td>
+			<td id="m32" class = "square" ></td>
+			<td id="m33" class = "square" ></td>
+			<td id="m34" class = "square" ></td>
+			<td id="m35" class = "square" ></td>
+			<td id="m36" class = "square" ></td>
+			<td id="m37" class = "square" ></td>
+			<td id="m38" class = "square" ></td>
+			<td id="m39" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="5" class = "square">5</td> <!-- Just a reference for playing the game-->
-			<td id="s40" class = "square" ></td>
-			<td id="s41" class = "square" ></td>
-			<td id="s42" class = "square" ></td>
-			<td id="s43" class = "square" ></td>
-			<td id="s44" class = "square" ></td>
-			<td id="s45" class = "square" ></td>
-			<td id="s46" class = "square" ></td>
-			<td id="s47" class = "square" ></td>
-			<td id="s48" class = "square" ></td>
-			<td id="s49" class = "square" ></td>
+			<td id="m40" class = "square" ></td>
+			<td id="m41" class = "square" ></td>
+			<td id="m42" class = "square" ></td>
+			<td id="m43" class = "square" ></td>
+			<td id="m44" class = "square" ></td>
+			<td id="m45" class = "square" ></td>
+			<td id="m46" class = "square" ></td>
+			<td id="m47" class = "square" ></td>
+			<td id="m48" class = "square" ></td>
+			<td id="m49" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="6" class = "square">6</td> <!-- Just a reference for playing the game-->
-			<td id="s50" class = "square" ></td>
-			<td id="s51" class = "square" ></td>
-			<td id="s52" class = "square" ></td>
-			<td id="s53" class = "square" ></td>
-			<td id="s54" class = "square" ></td>
-			<td id="s55" class = "square" ></td>
-			<td id="s56" class = "square" ></td>
-			<td id="s57" class = "square" ></td>
-			<td id="s58" class = "square" ></td>
-			<td id="s59" class = "square" ></td>
+			<td id="m50" class = "square" ></td>
+			<td id="m51" class = "square" ></td>
+			<td id="m52" class = "square" ></td>
+			<td id="m53" class = "square" ></td>
+			<td id="m54" class = "square" ></td>
+			<td id="m55" class = "square" ></td>
+			<td id="m56" class = "square" ></td>
+			<td id="m57" class = "square" ></td>
+			<td id="m58" class = "square" ></td>
+			<td id="m59" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="7" class = "square">7</td> <!-- Just a reference for playing the game-->
-			<td id="s60" class = "square" ></td>
-			<td id="s61" class = "square" ></td>
-			<td id="s62" class = "square" ></td>
-			<td id="s63" class = "square" ></td>
-			<td id="s64" class = "square" ></td>
-			<td id="s65" class = "square" ></td>
-			<td id="s66" class = "square" ></td>
-			<td id="s67" class = "square" ></td>
-			<td id="s68" class = "square" ></td>
-			<td id="s69" class = "square" ></td>
+			<td id="m60" class = "square" ></td>
+			<td id="m61" class = "square" ></td>
+			<td id="m62" class = "square" ></td>
+			<td id="m63" class = "square" ></td>
+			<td id="m64" class = "square" ></td>
+			<td id="m65" class = "square" ></td>
+			<td id="m66" class = "square" ></td>
+			<td id="m67" class = "square" ></td>
+			<td id="m68" class = "square" ></td>
+			<td id="m69" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="8" class = "square">8</td><!-- Just a reference for playing the game-->	
-			<td id="s70" class = "square" ></td>
-			<td id="s71" class = "square" ></td>
-			<td id="s72" class = "square" ></td>
-			<td id="s73" class = "square" ></td>
-			<td id="s74" class = "square" ></td>
-			<td id="s75" class = "square" ></td>
-			<td id="s76" class = "square" ></td>
-			<td id="s77" class = "square" ></td>
-			<td id="s78" class = "square" ></td>
-			<td id="s79" class = "square" ></td>
+			<td id="m70" class = "square" ></td>
+			<td id="m71" class = "square" ></td>
+			<td id="m72" class = "square" ></td>
+			<td id="m73" class = "square" ></td>
+			<td id="m74" class = "square" ></td>
+			<td id="m75" class = "square" ></td>
+			<td id="m76" class = "square" ></td>
+			<td id="m77" class = "square" ></td>
+			<td id="m78" class = "square" ></td>
+			<td id="m79" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="9" class = "square">9</td> <!-- Just a reference for playing the game-->
-			<td id="s80" class = "square" ></td>
-			<td id="s81" class = "square" ></td>
-			<td id="s82" class = "square" ></td>
-			<td id="s83" class = "square" ></td>
-			<td id="s84" class = "square" ></td>
-			<td id="s85" class = "square" ></td>
-			<td id="s86" class = "square" ></td>
-			<td id="s87" class = "square" ></td>
-			<td id="s88" class = "square" ></td>
-			<td id="s89" class = "square" ></td>
+			<td id="m80" class = "square" ></td>
+			<td id="m81" class = "square" ></td>
+			<td id="m82" class = "square" ></td>
+			<td id="m83" class = "square" ></td>
+			<td id="m84" class = "square" ></td>
+			<td id="m85" class = "square" ></td>
+			<td id="m86" class = "square" ></td>
+			<td id="m87" class = "square" ></td>
+			<td id="m88" class = "square" ></td>
+			<td id="m89" class = "square" ></td>
 		</tr>
 		<tr>
 			<td id="10" class = "square">10</td> <!-- Just a reference for playing the game-->
-			<td id="s90" class = "square" ></td>
-			<td id="s91" class = "square" ></td>
-			<td id="s92" class = "square" ></td>
-			<td id="s93" class = "square" ></td>
-			<td id="s94" class = "square" ></td>
-			<td id="s95" class = "square" ></td>
-			<td id="s96" class = "square" ></td>
-			<td id="s97" class = "square" ></td>
-			<td id="s98" class = "square" ></td>
-			<td id="s99" class = "square" ></td>
+			<td id="m90" class = "square" ></td>
+			<td id="m91" class = "square" ></td>
+			<td id="m92" class = "square" ></td>
+			<td id="m93" class = "square" ></td>
+			<td id="m94" class = "square" ></td>
+			<td id="m95" class = "square" ></td>
+			<td id="m96" class = "square" ></td>
+			<td id="m97" class = "square" ></td>
+			<td id="m98" class = "square" ></td>
+			<td id="m99" class = "square" ></td>
 		</tr>
 		</table>
-		
 	</td>
 </tr>
 <tr>
-		
-		
-		<td>
-		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Moves:</h4>
-		
-		<input id="shoot" type="text"  name="" size="35">
-		<button type="button" onclick="chatPost()">Fire!</button> 
+	<td>
+		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Move Units</h4><button type="button" onclick="placeShips()">Place Ships</button> 
 	
 	</td>
 	<td>
-		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Moves:</h4>
-		
-		<input id="shoot" type="text"  name="" size="35">
-		<button type="button" onclick="chatPost()">Fire!</button> 
+		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Attacks:</h4>
+		<button type="button" onclick="sendAttack()">Fire!</button> 
 	
 	</td>
 </tr>
