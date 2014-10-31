@@ -1,3 +1,5 @@
 SELECT Player1Hist.Player1Ships, Player2Hist.Player2Ships, Player1Hist.Fire, Player2Hist.Fire,Player1Hist.Hits, Player2Hist.Hits 
 FROM Player1Hist,Player2Hist 
-WHERE Player1Hist.Fire = Player2Hist.Fire AND Player1Hist.Hits = Player2Hist.Hits  AND Player1Hist.Fire = Player2Hist.Player2Ships;
+WHERE Player1Hist.Fire = Player2Hist.Fire AND Player1Hist.Hits = Player2Hist.Hits  
+AND Player1Hist.Fire = Player2Hist.Player2Ships;
+
