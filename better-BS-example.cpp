@@ -115,7 +115,7 @@ int main()
 	//Ready to play the game
 	gameRunning = true;
 	int thisPlayer = 1;
-	do {
+	do {															//This function can be extremely useful if we use cpp instead of JS.
 		//Because we are ATTACKING now, the 
 		//opposite players board is the display board					THIS AREA MAY NOT AGREE WITH OUR SETUP FOR BOARDS!!!!!
 		int enemyPlayer;
@@ -154,22 +154,22 @@ int main()
 }
 
 
-bool GameOverCheck(int enemyPLAYER)
+/*bool GameOverCheck(int enemyPLAYER)															//Already have this function in JS
 {
 	bool winner = true;
 	//Loop through enemy board
 	for (int w=0; w<BOARD_WIDTH; ++w){
 			for (int h=0; h<BOARD_HEIGHT; ++h){
 				//If any ships remain, game is NOT over
-				if (player[enemyPLAYER].grid[w][h] = isSHIP)					//Again, due to how boards are set up, this may create problems.  
-					{
+				if (player[enemyPLAYER].grid[w][h] = isSHIP)					//Again, due to how boards are set up, this may create problems.  We also have this done in JS anyway.
+					{															//so don't worry
 						winner = false;
 						return winner;
 					}
 		}}
 	//If we get here, somebody won, game over!
 	return winner;
-}
+}*/
 
 
 bool UserInputAttack(int& x, int& y, int theplayer)													//This function is good.  
@@ -183,7 +183,7 @@ bool UserInputAttack(int& x, int& y, int theplayer)													//This function 
 	return goodInput;
 }
 
-PLACESHIPS UserInputShipPlacement()																	//Also good.  
+PLACESHIPS UserInputShipPlacement()																	//Also good.  PLACE SHIPS funtion here
 {
 	int d, x, y;
 	PLACESHIPS tmp;
