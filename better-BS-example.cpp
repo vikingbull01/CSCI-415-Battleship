@@ -2,23 +2,26 @@
 #include <string>
 using namespace std;
 
-const int BOARD_WIDTH = 10;
-const int BOARD_HEIGHT = 10;
-const int SHIP_TYPES = 3;
+
+																				//As a reminder, if we change anything at all, need to check elsewhere.  
+																				//Plenty of correlation and borrowing values from other functions.  Which makes sense.  
+const int BOARD_WIDTH = 10;														  
+const int BOARD_HEIGHT = 10;													//board size right here.  can adjust for fun.
+const int SHIP_TYPES = 3;  														//I am taking this as how many ship TYPES.  as in, not the same kind.  
 
 const char isWATER = 247; //ASCII Character Code
 const char isHIT = 'X';
 const char isSHIP = 'S';
 const char isMISS = '0';
 
-struct POINT {
+struct POINT {																		//grid coordinates
 	//A location on the grid defined
 	//by X(horizontal) Y(vertical) coordinates
 	int X;
 	int Y;
 };
 
-struct SHIP {
+struct SHIP {															//This handles the ships characteristics.  As in, the name, length and points on grid.  
 	//Ship name
 	string name;
 	//Total points on the grid
@@ -56,7 +59,7 @@ int main()
 
 	//"PLACE SHIPS" phase of game
 	//Loop through each player... 
-	for (int aplyr=1; aplyr<3; ++aplyr)
+	for (int aplyr=1; aplyr<3; ++aplyr)												//this entire function (loop) can be reused.  may need to adjust for the boards though.  
 	{
 		//Loop through each ship type to place
 		for (int thisShip=0; thisShip<SHIP_TYPES; ++thisShip)
@@ -114,7 +117,7 @@ int main()
 	int thisPlayer = 1;
 	do {
 		//Because we are ATTACKING now, the 
-		//opposite players board is the display board
+		//opposite players board is the display board					THIS AREA MAY NOT AGREE WITH OUR SETUP FOR BOARDS!!!!!
 		int enemyPlayer;
 		if (thisPlayer == 1) enemyPlayer = 2;
 		if (thisPlayer == 2) enemyPlayer = 1;
@@ -158,7 +161,7 @@ bool GameOverCheck(int enemyPLAYER)
 	for (int w=0; w<BOARD_WIDTH; ++w){
 			for (int h=0; h<BOARD_HEIGHT; ++h){
 				//If any ships remain, game is NOT over
-				if (player[enemyPLAYER].grid[w][h] = isSHIP)
+				if (player[enemyPLAYER].grid[w][h] = isSHIP)					//Again, due to how boards are set up, this may create problems.  
 					{
 						winner = false;
 						return winner;
@@ -169,7 +172,7 @@ bool GameOverCheck(int enemyPLAYER)
 }
 
 
-bool UserInputAttack(int& x, int& y, int theplayer)
+bool UserInputAttack(int& x, int& y, int theplayer)													//This function is good.  
 {
 	cout << "\nPLAYER " << theplayer << ", ENTER COORDINATES TO ATTACK: ";
 	bool goodInput = false;
@@ -180,7 +183,7 @@ bool UserInputAttack(int& x, int& y, int theplayer)
 	return goodInput;
 }
 
-PLACESHIPS UserInputShipPlacement()
+PLACESHIPS UserInputShipPlacement()																	//Also good.  
 {
 	int d, x, y;
 	PLACESHIPS tmp;
