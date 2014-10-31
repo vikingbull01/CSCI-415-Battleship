@@ -7,7 +7,7 @@
 #include <vector>
 #include <time.h>
 #include "sqltdb.hpp"
-#include "sqltdb.cpp"
+
 using namespace std;
 
 //took out the variable, because I do not know if we would need this to update the board.
