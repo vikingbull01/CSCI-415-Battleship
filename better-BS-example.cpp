@@ -7,7 +7,7 @@ using namespace std;
 																				//Plenty of correlation and borrowing values from other functions.  Which makes sense.  
 const int BOARD_WIDTH = 10;														  
 const int BOARD_HEIGHT = 10;													//board size right here.  can adjust for fun.
-const int SHIP_TYPES = 3;  														//I am taking this as how many ship TYPES.  as in, not the same kind.  
+const int SHIP_TYPES = 3;  														//I am taking this as how many ship TYPES.  as in, not the same kind.  making it the same though.  will see.
 
 const char isWATER = 247; //ASCII Character Code
 const char isHIT = 'X';
@@ -206,15 +206,13 @@ void LoadShips()
 	//Sets the default data for the ships
 	//we plan to include in the game
 	//IMPORTANT!! > MUST MATCH SHIP_TYPES -Default=5 (0-4)
-	ship[0].name = "Cruiser"; ship[0].length = 2;
-	ship[1].name = "Frigate"; ship[1].length = 3;
-	ship[2].name = "Submarine"; ship[2].length = 3;
-	ship[3].name = "Escort"; ship[3].length = 4;
-	ship[4].name = "Battleship"; ship[4].length = 5;
-}
+	ship[0].name = "Battleship"; ship[0].length = 4;												//Set to one ship as specified on moodle. 
+	ship[1name = "Battleship"; ship[1].length = 4;
+	ship[2].name = "Battleship"; ship[2].length = 4;
+}																									//Battleship.  4 for length.  3 ships
 void ResetBoard()
 {
-	//Loop through each player
+	//Loop through each player																	Already set to clear BOTH boards so will use this.  JS one only does one board.
 	for (int plyr=1; plyr<3; ++plyr)
 	{
 		//For each grid point, set contents to 'water'
@@ -226,9 +224,9 @@ void ResetBoard()
 	}
 }
 
-void DrawBoard(int thisPlayer)
+/*void DrawBoard(int thisPlayer)//													This function could be deleted but keeping for now.  may be useful.  		
 {
-	//Draws the board for a player (thisPlayer)
+	//Draws the board for a player (thisPlayer)									
 	cout << "PLAYER " << thisPlayer << "'s GAME BOARD\n";
 	cout << "----------------------\n";
 
@@ -241,10 +239,10 @@ void DrawBoard(int thisPlayer)
 		else if (w >= 10)
 			//Numbers 2 characters long, add only 1 space after
 			cout << w << " ";
-	}
+	}*/
 	cout << "\n";
 
-	//Loop through each grid point and display to console
+	/*//Loop through each grid point and display to console						This function could also be deleted.  Keeping for now until html works.  
 	for (int h=0; h<BOARD_HEIGHT; ++h){
 		for (int w=0; w<BOARD_WIDTH; ++w){
 			
@@ -263,5 +261,5 @@ void DrawBoard(int thisPlayer)
 			//If we have reached the border.. line feed
 			if (w == BOARD_WIDTH-1) cout << "\n";
 		}
-	}
+	}*/
 }
