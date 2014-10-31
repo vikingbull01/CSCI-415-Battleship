@@ -6,13 +6,12 @@
 #include <string>
 #include <vector>
 #include <time.h>
-#include "randomStr.hpp"
-#include "tstamp.hpp"
 #include "sqltdb.hpp"
+#include "sqltdb.cpp"
 using namespace std;
 
-//took out the variable, because I dont know if we would need this to update the board.
-int refresh()
+//took out the variable, because I do not know if we would need this to update the board.
+int refreshBoard()
 {
 string userName, userPass;
 int nRows, nCols;
@@ -48,8 +47,6 @@ string p1ships, p1fire, p2ships, p2fire,turn;
 turn = 1;
 sqltWrap db;
 
-tstamp ts1, ts2;
-
 
 srand(time(NULL));
 vector<string> messages;
@@ -67,11 +64,9 @@ getline(cin,p1fire);
 getline(cin,p2ships);
 getline(cin,p2fire);
 
-
-
 //player1HistoryINSERTS
-if(turn = 1)
-{
+//if(turn = 1)
+//{
 	if (db.doCommand("INSERT INTO Player1Hist (Player1Ships, Player1Fire) VALUES ('" + p1ships + "','" + p1fire + "')") == DB_SUCCESS) 
   		{
    			// cout << "SUCCESS\nDebugging test.............................................\n" << endl;
@@ -83,11 +78,11 @@ if(turn = 1)
    	 		exit(0);
     	}
 	turn = 2;
-}   
+//}   
 
 //player2HistoryINSERTS
-else
-{
+//else
+//{
 	if (db.doCommand("INSERT INTO Player2Hist (Player2Ships, Player2Fire) VALUES ('" + p2ships + "','" + p2fire + "')") == DB_SUCCESS) 
   		{
    			// cout << "SUCCESS\nDebugging test.............................................\n" << endl;
@@ -96,12 +91,12 @@ else
   	else
    		{
    	 		cout << "ERROR\nThere was a problem with our database. Try again later.1" << endl;
-   			 exit(0);
+   			exit(0);
     	}
 	turn = 1;
-}
+//}
 	
-refresh();
+refreshBoard();//runs the refreshBoard function
 
 return 0;
 }
