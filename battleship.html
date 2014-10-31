@@ -39,28 +39,14 @@
 </head>
 <script type="text/javascript">
 var cellNumber;
-var north = (cellNumber - 30);
-var south = (cellNumber + 30);
-var west = (cellNumber - 3);
-var east = (cellNumber + 3);
-var northwest = (cellNumber - 33);
-var northeast = (cellNumber - 27);
-var southwest = (cellNumber + 27);
-var southeast = (cellNumber + 33);
+var counter = 0;
 
 function startGame(){
-
-//Updated upstream
-	for(var i = 0; i < 100; i++)
-
 	//clears the gameboard to start a new game
 	for(var i = 0; i < 100; i++)
-
 		{
 			clearBoard(i);
 		}
-		
-	
 	document.winner = null;
 	setMessage("You have 60 seconds to place your ships!!! \n GO!!!!" );
 }
@@ -70,1018 +56,9 @@ function setMessage(msg)
 	document.getElementById("message").innerText = msg;
 }
 
-function idConversion(targetID)
-{
-	if (targetID == "m0")
-	{
-		cellNumber = 0;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m1")
-	{
-		cellNumber = 1;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m2")
-	{
-		cellNumber = 2;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m3")
-	{
-		cellNumber = 3;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m4")
-	{
-		cellNumber = 4;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m5")
-	{
-		cellNumber = 5;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m6")
-	{
-		cellNumber = 6;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m7")
-	{
-		cellNumber = 7;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m8")
-	{
-		cellNumber = 8;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m9")
-	{
-		cellNumber = 9;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m10")
-	{
-		cellNumber = 10;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m11")
-	{
-		cellNumber = 11;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m12")
-	{
-		cellNumber = 12;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m13")
-	{
-		cellNumber = 13;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m14")
-	{
-		cellNumber = 14;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m15")
-	{
-		cellNumber = 15;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m16")
-	{
-		cellNumber = 16;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m17")
-	{
-		cellNumber = 17;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m18")
-	{
-		cellNumber = 18;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m19")
-	{
-		cellNumber = 19;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m20")
-	{
-		cellNumber = 20;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m21")
-	{
-		cellNumber = 21;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m22")
-	{
-		cellNumber = 22;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m23")
-	{
-		cellNumber = 23;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m24")
-	{
-		cellNumber = 24;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m25")
-	{
-		cellNumber = 25;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m26")
-	{
-		cellNumber = 26;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m27")
-	{
-		cellNumber = 27;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m28")
-	{
-		cellNumber = 28;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m29")
-	{
-		cellNumber = 29;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m30")
-	{
-		cellNumber = 30;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m31")
-	{
-		cellNumber = 31;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m32")
-	{
-		cellNumber = 32;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m33")
-	{
-		cellNumber = 33;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m34")
-	{
-		cellNumber = 34;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m35")
-	{
-		cellNumber = 35;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m36")
-	{
-		cellNumber = 36;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m37")
-	{
-		cellNumber = 37;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m38")
-	{
-		cellNumber = 38;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m39")
-	{
-		cellNumber = 39;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m40")
-	{
-		cellNumber = 40;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m41")
-	{
-		cellNumber = 41;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m42")
-	{
-		cellNumber = 42;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m43")
-	{
-		cellNumber = 43;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m44")
-	{
-		cellNumber = 44;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m45")
-	{
-		cellNumber = 45;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m46")
-	{
-		cellNumber = 46;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m47")
-	{
-		cellNumber = 47;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m48")
-	{
-		cellNumber = 48;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m49")
-	{
-		cellNumber = 49;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m50")
-	{
-		cellNumber = 50;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m51")
-	{
-		cellNumber = 51;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m52")
-	{
-		cellNumber = 52;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m53")
-	{
-		cellNumber = 53;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m54")
-	{
-		cellNumber = 54;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m55")
-	{
-		cellNumber = 55;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m56")
-	{
-		cellNumber = 56;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m57")
-	{
-		cellNumber = 57;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m58")
-	{
-		cellNumber = 58;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m59")
-	{
-		cellNumber = 59;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m60")
-	{
-		cellNumber = 60;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m61")
-	{
-		cellNumber = 61;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m62")
-	{
-		cellNumber = 62;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m63")
-	{
-		cellNumber = 63;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m64")
-	{
-		cellNumber = 64;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m65")
-	{
-		cellNumber = 65;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m66")
-	{
-		cellNumber = 66;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m67")
-	{
-		cellNumber = 67;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m68")
-	{
-		cellNumber = 68;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m69")
-	{
-		cellNumber = 69;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m70")
-	{
-		cellNumber = 70;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m71")
-	{
-		cellNumber = 71;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m72")
-	{
-		cellNumber = 72;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m73")
-	{
-		cellNumber = 73;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m74")
-	{
-		cellNumber = 74;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m75")
-	{
-		cellNumber = 75;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m76")
-	{
-		cellNumber = 76;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m77")
-	{
-		cellNumber = 77;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m78")
-	{
-		cellNumber = 78;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m79")
-	{
-		cellNumber = 79;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m80")
-	{
-		cellNumber = 80;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m81")
-	{
-		cellNumber = 81;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m82")
-	{
-		cellNumber = 82;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m83")
-	{
-		cellNumber = 83;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m84")
-	{
-		cellNumber = 84;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m85")
-	{
-		cellNumber = 85;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m86")
-	{
-		cellNumber = 86;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m87")
-	{
-		cellNumber = 87;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m88")
-	{
-		cellNumber = 88;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m89")
-	{
-		cellNumber = 89;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m90")
-	{
-		cellNumber = 90;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m91")
-	{
-		cellNumber = 91;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m92")
-	{
-		cellNumber = 92;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m93")
-	{
-		cellNumber = 93;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m94")
-	{
-		cellNumber = 94;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m95")
-	{
-		cellNumber = 95;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m96")
-	{
-		cellNumber = 96;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m97")
-	{
-		cellNumber = 97;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m98")
-	{
-		cellNumber = 98;
-		sendShots(cellNumber);
-	}
-	else if (targetID == "m99")
-	{
-		cellNumber = 99;
-		sendShots(cellNumber);
-	}	
-}
-
 function sendShots(cellNumber)
 {
 	$eid("s" + cellNumber).style.backgroundColor = "red";
-}
-
-function idConversion2(targetID)
-{
-	if (targetID == "s0")
-	{
-		cellNumber = 0;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s1")
-	{
-		cellNumber = 1;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s2")
-	{
-		cellNumber = 2;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s3")
-	{
-		cellNumber = 3;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s4")
-	{
-		cellNumber = 4;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s5")
-	{
-		cellNumber = 5;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s6")
-	{
-		cellNumber = 6;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s7")
-	{
-		cellNumber = 7;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s8")
-	{
-		cellNumber = 8;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s9")
-	{
-		cellNumber = 9;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s10")
-	{
-		cellNumber = 10;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s11")
-	{
-		cellNumber = 11;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s12")
-	{
-		cellNumber = 12;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s13")
-	{
-		cellNumber = 13;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s14")
-	{
-		cellNumber = 14;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s15")
-	{
-		cellNumber = 15;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s16")
-	{
-		cellNumber = 16;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s17")
-	{
-		cellNumber = 17;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s18")
-	{
-		cellNumber = 18;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s19")
-	{
-		cellNumber = 19;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s20")
-	{
-		cellNumber = 20;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s21")
-	{
-		cellNumber = 21;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s22")
-	{
-		cellNumber = 22;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s23")
-	{
-		cellNumber = 23;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s24")
-	{
-		cellNumber = 24;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s25")
-	{
-		cellNumber = 25;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s26")
-	{
-		cellNumber = 26;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s27")
-	{
-		cellNumber = 27;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s28")
-	{
-		cellNumber = 28;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s29")
-	{
-		cellNumber = 29;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s30")
-	{
-		cellNumber = 30;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s31")
-	{
-		cellNumber = 31;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s32")
-	{
-		cellNumber = 32;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s33")
-	{
-		cellNumber = 33;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s34")
-	{
-		cellNumber = 34;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s35")
-	{
-		cellNumber = 35;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s36")
-	{
-		cellNumber = 36;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s37")
-	{
-		cellNumber = 37;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s38")
-	{
-		cellNumber = 38;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s39")
-	{
-		cellNumber = 39;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s40")
-	{
-		cellNumber = 40;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s41")
-	{
-		cellNumber = 41;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s42")
-	{
-		cellNumber = 42;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s43")
-	{
-		cellNumber = 43;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s44")
-	{
-		cellNumber = 44;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s45")
-	{
-		cellNumber = 45;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s46")
-	{
-		cellNumber = 46;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s47")
-	{
-		cellNumber = 47;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s48")
-	{
-		cellNumber = 48;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s49")
-	{
-		cellNumber = 49;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s50")
-	{
-		cellNumber = 50;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s51")
-	{
-		cellNumber = 51;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s52")
-	{
-		cellNumber = 52;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s53")
-	{
-		cellNumber = 53;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s54")
-	{
-		cellNumber = 54;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s55")
-	{
-		cellNumber = 55;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s56")
-	{
-		cellNumber = 56;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s57")
-	{
-		cellNumber = 57;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s58")
-	{
-		cellNumber = 58;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s59")
-	{
-		cellNumber = 59;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s60")
-	{
-		cellNumber = 60;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s61")
-	{
-		cellNumber = 61;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s62")
-	{
-		cellNumber = 62;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s63")
-	{
-		cellNumber = 63;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s64")
-	{
-		cellNumber = 64;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s65")
-	{
-		cellNumber = 65;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s66")
-	{
-		cellNumber = 66;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s67")
-	{
-		cellNumber = 67;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s68")
-	{
-		cellNumber = 68;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s69")
-	{
-		cellNumber = 69;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s70")
-	{
-		cellNumber = 70;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s71")
-	{
-		cellNumber = 71;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s72")
-	{
-		cellNumber = 72;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s73")
-	{
-		cellNumber = 73;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s74")
-	{
-		cellNumber = 74;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s75")
-	{
-		cellNumber = 75;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s76")
-	{
-		cellNumber = 76;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s77")
-	{
-		cellNumber = 77;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s78")
-	{
-		cellNumber = 78;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s79")
-	{
-		cellNumber = 79;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s80")
-	{
-		cellNumber = 80;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s81")
-	{
-		cellNumber = 81;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s82")
-	{
-		cellNumber = 82;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s83")
-	{
-		cellNumber = 83;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s84")
-	{
-		cellNumber = 84;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s85")
-	{
-		cellNumber = 85;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s86")
-	{
-		cellNumber = 86;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s87")
-	{
-		cellNumber = 87;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s88")
-	{
-		cellNumber = 88;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s89")
-	{
-		cellNumber = 89;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s90")
-	{
-		cellNumber = 90;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s91")
-	{
-		cellNumber = 91;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s92")
-	{
-		cellNumber = 92;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s93")
-	{
-		cellNumber = 93;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s94")
-	{
-		cellNumber = 94;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s95")
-	{
-		cellNumber = 95;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s96")
-	{
-		cellNumber = 96;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s97")
-	{
-		cellNumber = 97;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s98")
-	{
-		cellNumber = 98;
-		seeMoves(cellNumber);
-	}
-	else if (targetID == "s99")
-	{
-		cellNumber = 99;
-		seeMoves(cellNumber);
-	}
-	
 }
 
 function seeMoves(cellNumber)
@@ -1095,24 +72,91 @@ function seeMoves(cellNumber)
 	var southwest = (cellNumber + 27);
 	var southeast = (cellNumber + 33);
 
-	$eid("s" + cellNumber).style.backgroundColor = "gray";
-	$eid("s" + north).style.backgroundColor = "lightgray";
-	$eid("s" + south).style.backgroundColor = "lightgray";
-	$eid("s" + east).style.backgroundColor = "lightgray";
-	$eid("s" + west).style.backgroundColor = "lightgray";
-	$eid("s" + northwest).style.backgroundColor = "lightgray";
-	$eid("s" + northeast).style.backgroundColor = "lightgray";
-	$eid("s" + southwest).style.backgroundColor = "lightgray";
-	$eid("s" + southeast).style.backgroundColor = "lightgray";
-		$eid("brd").removeEventListener('mousedown', placeShipStart);
-		$eid("s" + north).addEventListener('mousedown', setShipNorth);
-		$eid("s" + south).addEventListener('mousedown', setShipSouth);
-		$eid("s" + west).addEventListener('mousedown', setShipWest);
-		$eid("s" + east).addEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).addEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).addEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).addEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).addEventListener('mousedown', setShipSouthEast);
+	$eid("s" + cellNumber).style.backgroundColor = "black";
+		
+	if ((north >= 0) && (north <= 99))
+	{
+		if ($eid("s" + north).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			$eid("s" + north).style.backgroundColor = "gray";
+			$eid("s" + north).addEventListener('mousedown', setShipNorth);
+		}
+	}
+	if ((south >= 0) && (south <= 99))
+	{
+		if ($eid("s" + south).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			$eid("s" + south).style.backgroundColor = "gray";
+			$eid("s" + south).addEventListener('mousedown', setShipSouth);
+		}
+	}
+	if ((west >= 0) && (west <= 99))
+	{
+		if ($eid("s" + west).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			if (west % 10 < cellNumber % 10)
+			{
+				$eid("s" + west).style.backgroundColor = "gray";
+			$eid("s" + west).addEventListener('mousedown', setShipWest);
+			}
+		}
+	}
+	if ((east >= 0) && (east <= 99))
+	{
+		if ($eid("s" + east).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			if (east % 10 > cellNumber % 10)
+			{
+				$eid("s" + east).style.backgroundColor = "gray";
+				$eid("s" + east).addEventListener('mousedown', setShipEast);
+			}
+		}
+	}
+	if ((northwest >= 0) && (northwest <= 99))
+	{
+		if ($eid("s" + northwest).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			if (west % 10 < cellNumber % 10)
+			{
+				$eid("s" + northwest).style.backgroundColor = "gray";
+				$eid("s" + northwest).addEventListener('mousedown', setShipNorthWest);
+			}
+		}
+	}
+	if ((northeast >= 0) && (northeast <= 99))
+	{
+		if ($eid("s" + northeast).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			if (northeast % 10 > cellNumber % 10)
+			{
+				$eid("s" + northeast).style.backgroundColor = "gray";
+				$eid("s" + northeast).addEventListener('mousedown', setShipNorthEast);
+			}
+		}
+	}
+	if ((southwest >= 0) && (southwest <= 99))
+	{
+		if ($eid("s" + southwest).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			if (southwest % 10 < cellNumber % 10)
+			{
+				$eid("s" + southwest).style.backgroundColor = "gray";
+				$eid("s" + southwest).addEventListener('mousedown', setShipSouthWest);
+			}
+		}
+	}
+	if ((southeast >= 0) && (southeast <= 99))
+	{
+		if ($eid("s" + southeast).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		{
+			if (southeast % 10 > cellNumber % 10)
+			{
+				$eid("s" + southeast).style.backgroundColor = "gray";
+				$eid("s" + southeast).addEventListener('mousedown', setShipSouthEast);
+			}
+		}
+	}
+	$eid("brd").removeEventListener('mousedown', placeShipStart);
 }
 
 function setShipNorth(ev)
@@ -1121,34 +165,10 @@ function setShipNorth(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber += 30;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber - 10)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 20)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 30)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+	clearSpots(cellNumber);
+		$eid("s" + (cellNumber - 10)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 20)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 30)).style.backgroundColor = "black";
 }
 
 function setShipSouth(ev)
@@ -1157,34 +177,10 @@ function setShipSouth(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber -= 30;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber + 10)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 20)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 30)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+	clearSpots(cellNumber);
+		$eid("s" + (cellNumber + 10)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 20)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 30)).style.backgroundColor = "black";
 }	
 
 function setShipWest(ev)
@@ -1193,34 +189,10 @@ function setShipWest(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber += 3;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);	
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber - 1)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 2)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 3)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+	clearSpots(cellNumber);
+		$eid("s" + (cellNumber - 1)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 2)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 3)).style.backgroundColor = "black";
 }
 
 function setShipEast(ev)
@@ -1229,34 +201,10 @@ function setShipEast(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber -= 3;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber + 1)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 2)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 3)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+	clearSpots(cellNumber);
+		$eid("s" + (cellNumber + 1)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 2)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 3)).style.backgroundColor = "black";
 }
 
 function setShipNorthWest(ev)
@@ -1265,34 +213,10 @@ function setShipNorthWest(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber += 33;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber - 11)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 22)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 33)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+		clearSpots(cellNumber);
+		$eid("s" + (cellNumber - 11)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 22)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 33)).style.backgroundColor = "black";
 }
 
 function setShipNorthEast(ev)
@@ -1301,34 +225,10 @@ function setShipNorthEast(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber += 27;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);	
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber - 9)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 18)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber - 27)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+		clearSpots(cellNumber);
+		$eid("s" + (cellNumber - 9)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 18)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber - 27)).style.backgroundColor = "black";
 }
 
 function setShipSouthEast(ev)
@@ -1337,34 +237,10 @@ function setShipSouthEast(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber -= 33;
-	var north = (cellNumber - 30);
-	var south = (cellNumber + 30);
-	var west = (cellNumber - 3);
-	var east = (cellNumber + 3);
-	var northwest = (cellNumber - 33);
-	var northeast = (cellNumber - 27);
-	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);	
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber + 11)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 22)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 33)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+	clearSpots(cellNumber);
+		$eid("s" + (cellNumber + 11)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 22)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 33)).style.backgroundColor = "black";
 }
 
 function setShipSouthWest(ev)
@@ -1373,6 +249,15 @@ function setShipSouthWest(ev)
 	var cellString = str.substr(1);
 	var cellNumber = parseFloat(cellString);
 	cellNumber -= 27;
+		clearSpots(cellNumber);
+		$eid("s" + (cellNumber + 9)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 18)).style.backgroundColor = "black";
+		$eid("s" + (cellNumber + 27)).style.backgroundColor = "black";
+}
+
+function clearSpots(cellNumber)
+{
+	var cellNumber;
 	var north = (cellNumber - 30);
 	var south = (cellNumber + 30);
 	var west = (cellNumber - 3);
@@ -1380,27 +265,90 @@ function setShipSouthWest(ev)
 	var northwest = (cellNumber - 33);
 	var northeast = (cellNumber - 27);
 	var southwest = (cellNumber + 27);
-	var southeast = (cellNumber + 33);	
-		$eid("s" + north).style.backgroundColor = "white";
-		$eid("s" + south).style.backgroundColor = "white";
-		$eid("s" + east).style.backgroundColor = "white";
-		$eid("s" + west).style.backgroundColor = "white";
-		$eid("s" + northwest).style.backgroundColor = "white";
-		$eid("s" + northeast).style.backgroundColor = "white";
-		$eid("s" + southwest).style.backgroundColor = "white";
-		$eid("s" + southeast).style.backgroundColor = "white";
-		$eid("s" + (cellNumber + 9)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 18)).style.backgroundColor = "gray";
-		$eid("s" + (cellNumber + 27)).style.backgroundColor = "gray";
-		$eid("s" + north).removeEventListener('mousedown', setShipNorth);
-		$eid("s" + south).removeEventListener('mousedown', setShipSouth);
-		$eid("s" + west).removeEventListener('mousedown', setShipWest);
-		$eid("s" + east).removeEventListener('mousedown', setShipEast);
-		$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
-		$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
-		$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
-		$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
-		$eid("brd").addEventListener('mousedown', placeShipStart);
+	var southeast = (cellNumber + 33);
+	
+	if ((north >= 0) && (north <= 99))
+	{
+		if ($eid("s" + north).style.backgroundColor == "gray")
+		{
+			$eid("s" + north).style.backgroundColor = "rgba(0, 0, 0, 0)";
+			$eid("s" + north).removeEventListener('mousedown', setShipNorth);
+		}
+	}
+	if ((south >= 0) && (south <= 99))
+	{
+		if ($eid("s" + south).style.backgroundColor == "gray")
+		{
+			$eid("s" + south).style.backgroundColor = "rgba(0, 0, 0, 0)";
+			$eid("s" + south).removeEventListener('mousedown', setShipSouth);
+		}
+	}
+	if ((west >= 0) && (west <= 99))
+	{
+		if ($eid("s" + west).style.backgroundColor == "gray")
+		{
+			if (west % 10 < cellNumber % 10)
+			{
+				$eid("s" + west).style.backgroundColor = "rgba(0, 0, 0, 0)";
+			$eid("s" + west).removeEventListener('mousedown', setShipWest);
+			}
+		}
+	}
+	if ((east >= 0) && (east <= 99))
+	{
+		if ($eid("s" + east).style.backgroundColor == "gray")
+		{
+			if (east % 10 > cellNumber % 10)
+			{
+				$eid("s" + east).style.backgroundColor = "rgba(0, 0, 0, 0)";
+				$eid("s" + east).removeEventListener('mousedown', setShipEast);
+			}
+		}
+	}
+	if ((northwest >= 0) && (northwest <= 99))
+	{
+		if ($eid("s" + northwest).style.backgroundColor == "gray")
+		{
+			if (northwest % 10 < cellNumber % 10)
+			{
+				$eid("s" + northwest).style.backgroundColor = "rgba(0, 0, 0, 0)";
+				$eid("s" + northwest).removeEventListener('mousedown', setShipNorthWest);
+			}
+		}
+	}
+	if ((northeast >= 0) && (northeast <= 99))
+	{
+		if ($eid("s" + northeast).style.backgroundColor == "gray")
+		{
+			if (northeast % 10 > cellNumber % 10)
+			{
+				$eid("s" + northeast).style.backgroundColor = "rgba(0, 0, 0, 0)";
+				$eid("s" + northeast).removeEventListener('mousedown', setShipNorthEast);
+			}
+		}
+	}
+	if ((southwest >= 0) && (southwest <= 99))
+	{
+		if ($eid("s" + southwest).style.backgroundColor == "gray")
+		{
+			if (southwest % 10 < cellNumber % 10)
+			{
+				$eid("s" + southwest).style.backgroundColor = "rgba(0, 0, 0, 0)";
+				$eid("s" + southwest).removeEventListener('mousedown', setShipSouthWest);
+			}
+		}
+	}
+	if ((southeast >= 0) && (southeast <= 99))
+	{
+		if ($eid("s" + southeast).style.backgroundColor == "gray")
+		{
+			if (southeast % 10 > cellNumber % 10)
+			{
+				$eid("s" + southeast).style.backgroundColor = "rgba(0, 0, 0, 0)";
+				$eid("s" + southeast).removeEventListener('mousedown', setShipSouthEast);
+			}
+		}
+	}
 }
 
 function clearBoard(number)
@@ -1413,11 +361,6 @@ function $eid(id)
 {
 return document.getElementById(id);
 }
-//****************************************
-//left board, blue
-//****************************************
-var click = 1;
-var targetID;
 
 function cellClick(ev)
 {
@@ -1432,8 +375,10 @@ else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
 	else
 		{
    			ev.target.style.backgroundColor = "blue";
-			targetID = ev.target.id;
-			idConversion(targetID);
+			var str = ev.target.id;
+			var cellString = str.substr(1);
+			var cellNumber = parseFloat(cellString);
+			sendShots(cellNumber);
 		}
 	}
 	else 
@@ -1451,7 +396,13 @@ $eid("brd2").addEventListener('mousedown', cellClick);
 
 function placeShips()
 {
-	$eid("brd").addEventListener('mousedown', placeShipStart);
+	if (counter < 3)
+	{
+		$eid("brd").addEventListener('mousedown', placeShipStart);
+		counter++;
+	}
+	else 
+	alert("You already placed all three ships. \n Please wait for the game to start");
 }
 
 function placeShipStart(ev)
@@ -1466,9 +417,10 @@ function placeShipStart(ev)
 		}
 		else
 		{
-   			ev.target.style.backgroundColor = "gray";
-			targetID = ev.target.id;
-			idConversion2(targetID);
+			var str = ev.target.id;
+			var cellString = str.substr(1);
+			var cellNumber = parseFloat(cellString);
+			seeMoves(cellNumber);
 		}
 	}
 }
