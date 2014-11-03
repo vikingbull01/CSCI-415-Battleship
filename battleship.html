@@ -408,9 +408,10 @@ function sendAttack()
 
 function cellClick(ev)
 {
+var str = ev.target.id;
 if (ev.target.id == "brd2")
 	alert ("You aren't going to hit anything there!!");
-else if ((getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)") || (ev.target.style.backgroundColor == "pink"))
+else if ((getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)") || ($eid(str).style.backgroundColor == "pink"))
    {
 	if(document.winner != null)
 	{
