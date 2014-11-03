@@ -44,6 +44,7 @@ var shot1;
 var shot2;
 var shot3;
 var ShipCounter = 0;
+var NumberShots;
 
 function startGame(){
 	//clears the gameboard to start a new game
@@ -80,7 +81,7 @@ function seeMoves(cellNumber)
 		
 	if ((north >= 0) && (north <= 99))
 	{
-		if ($eid("s" + north).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + north).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (north + 10)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (north + 20)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			$eid("s" + north).style.backgroundColor = "gray";
 			$eid("s" + north).addEventListener('mousedown', setShipNorth);
@@ -88,7 +89,7 @@ function seeMoves(cellNumber)
 	}
 	if ((south >= 0) && (south <= 99))
 	{
-		if ($eid("s" + south).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + south).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (south - 10)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (south - 20)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			$eid("s" + south).style.backgroundColor = "gray";
 			$eid("s" + south).addEventListener('mousedown', setShipSouth);
@@ -96,7 +97,7 @@ function seeMoves(cellNumber)
 	}
 	if ((west >= 0) && (west <= 99))
 	{
-		if ($eid("s" + west).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + west).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (west + 1)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (west + 2)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			if (west % 10 < cellNumber % 10)
 			{
@@ -107,7 +108,7 @@ function seeMoves(cellNumber)
 	}
 	if ((east >= 0) && (east <= 99))
 	{
-		if ($eid("s" + east).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + east).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (east - 1)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (east - 2)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			if (east % 10 > cellNumber % 10)
 			{
@@ -118,7 +119,7 @@ function seeMoves(cellNumber)
 	}
 	if ((northwest >= 0) && (northwest <= 99))
 	{
-		if ($eid("s" + northwest).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + northwest).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (northwest + 11)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (northwest + 22)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			if (west % 10 < cellNumber % 10)
 			{
@@ -129,7 +130,7 @@ function seeMoves(cellNumber)
 	}
 	if ((northeast >= 0) && (northeast <= 99))
 	{
-		if ($eid("s" + northeast).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + northeast).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (northeast + 9)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (northeast + 18)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			if (northeast % 10 > cellNumber % 10)
 			{
@@ -140,7 +141,7 @@ function seeMoves(cellNumber)
 	}
 	if ((southwest >= 0) && (southwest <= 99))
 	{
-		if ($eid("s" + southwest).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + southwest).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (southwest - 9)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (southwest - 18)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			if (southwest % 10 < cellNumber % 10)
 			{
@@ -151,7 +152,7 @@ function seeMoves(cellNumber)
 	}
 	if ((southeast >= 0) && (southeast <= 99))
 	{
-		if ($eid("s" + southeast).style.backgroundColor == "rgba(0, 0, 0, 0)")
+		if (($eid("s" + southeast).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (southeast - 11)).style.backgroundColor == "rgba(0, 0, 0, 0)") && ($eid("s" + (southeast - 22)).style.backgroundColor == "rgba(0, 0, 0, 0)"))
 		{
 			if (southeast % 10 > cellNumber % 10)
 			{
@@ -368,14 +369,48 @@ return document.getElementById(id);
 
 function sendAttack()
 {
-	
+	if (NumberShots == "1")
+	{
+		if($eid("s" + shot1).style.backgroundColor == "black")
+			$eid("m" + shot1).style.backgroundColor = "red";
+		else
+			$eid("m" + shot1).style.backgroundColor = "blue";
+	}
+	else
+	{
+		if($eid("s" + shot1).style.backgroundColor == "black")
+		{
+			$eid("m" + shot1).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+		}
+		else if($eid("s" + shot2).style.backgroundColor == "black")
+		{
+			$eid("m" + shot1).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+		}
+		else if($eid("s" + shot3).style.backgroundColor == "black")
+		{
+			$eid("m" + shot1).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+		}
+		else
+		{
+			$eid("m" + shot1).style.backgroundColor = "blue";
+			$eid("m" + shot2).style.backgroundColor = "blue";
+			$eid("m" + shot3).style.backgroundColor = "blue";
+		}
+	}
+	ShipCounter = 0;
 }
 
 function cellClick(ev)
 {
 if (ev.target.id == "brd2")
 	alert ("You aren't going to hit anything there!!");
-else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
+else if ((getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)") || (ev.target.style.backgroundColor == "pink"))
    {
 	if(document.winner != null)
 	{
@@ -388,7 +423,9 @@ else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
 			case 0:
 				{
 					ev.target.style.backgroundColor = "pink";
-					shot1 = ev.target.id;
+					var str = ev.target.id;
+					var cellString = str.substr(1);
+					shot1 = parseFloat(cellString);
 					ShipCounter++;
 					NumberShots = 1;
 					break;
@@ -396,7 +433,9 @@ else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
 			case 1:
 				{
 					ev.target.style.backgroundColor = "pink";
-					shot2 = ev.target.id;
+					var str = ev.target.id;
+					var cellString = str.substr(1);
+					shot2 = parseFloat(cellString);
 					ShipCounter++;
 					NumberShots = 2;
 					break;
@@ -404,7 +443,9 @@ else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
 			case 2:
 				{
 					ev.target.style.backgroundColor = "pink";
-					shot3 = ev.target.id;
+					var str = ev.target.id;
+					var cellString = str.substr(1);
+					shot3 = parseFloat(cellString);
 					ShipCounter++;
 					NumberShots = 3;
 					break;
