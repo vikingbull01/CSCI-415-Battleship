@@ -1,0 +1,24 @@
+CREATE TABLE Players
+(
+player VARCHAR(20),
+gameID INTEGER,
+sessionID INTEGER;
+);
+
+CREATE TABLE Player1Hist
+(
+Player1Ships INTEGER, 
+Hits INTEGER,
+Miss INTEGER,
+Fire INTEGER;
+);
+
+CREATE TABLE Player2Hist
+(
+Player2Ships INTEGER,
+Player2Fire
+Hits INTEGER,
+Miss INTEGER,
+Fire INTEGER;
+);
+
