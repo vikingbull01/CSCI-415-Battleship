@@ -40,6 +40,10 @@
 <script type="text/javascript">
 var cellNumber;
 var counter = 0;
+var shot1;
+var shot2;
+var shot3;
+var ShipCounter = 0;
 
 function startGame(){
 	//clears the gameboard to start a new game
@@ -362,6 +366,11 @@ function $eid(id)
 return document.getElementById(id);
 }
 
+function sendAttack()
+{
+	
+}
+
 function cellClick(ev)
 {
 if (ev.target.id == "brd2")
@@ -374,11 +383,35 @@ else if (getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)")
 	}
 	else
 		{
-   			ev.target.style.backgroundColor = "blue";
-			var str = ev.target.id;
-			var cellString = str.substr(1);
-			var cellNumber = parseFloat(cellString);
-			sendShots(cellNumber);
+			switch (ShipCounter)
+			{
+			case 0:
+				{
+					ev.target.style.backgroundColor = "pink";
+					shot1 = ev.target.id;
+					ShipCounter++;
+					NumberShots = 1;
+					break;
+				}
+			case 1:
+				{
+					ev.target.style.backgroundColor = "pink";
+					shot2 = ev.target.id;
+					ShipCounter++;
+					NumberShots = 2;
+					break;
+				}
+			case 2:
+				{
+					ev.target.style.backgroundColor = "pink";
+					shot3 = ev.target.id;
+					ShipCounter++;
+					NumberShots = 3;
+					break;
+				}
+			default:
+				alert("You already selected all your shots.");
+			}
 		}
 	}
 	else 
@@ -424,19 +457,6 @@ function placeShipStart(ev)
 		}
 	}
 }
-// AJAX for the chat
-/*******************************************************************
-function placeShips()
-	{
-		var data;
-		data = document.getElementById("post").value;
-                          
-		ajaxRequestPost("Tictacchat.cgi", data, "text/plain", true, 
-		document.getElementById("chatmsg"),document.getElementById("chatmsg"),successFunc, webServerError); 
-	}
-	
-	*******************************************************************/
-		/*---------------------------------------------------*/	
 
 function webServerError(status, statusText, area)
 	{
@@ -760,7 +780,7 @@ Left Board = Your Ships | Right Board = Your Attacks </p> <!-- Tells the players
 	
 	</td>
 	<td>
-		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Attacks:</h4>
+		<h4 style="color: white; text-shadow: 2px 2px black; font-style: italic;" class="descrip">Send Attacks:</h4> 
 		<button type="button" onclick="sendAttack()">Fire!</button> 
 	
 	</td>
