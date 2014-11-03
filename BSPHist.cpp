@@ -17,8 +17,10 @@ string userName, userPass;
 int nRows, nCols;
 sqltWrap db;
 
+//opens the database
 db.open("battleshiphist");
 
+//gets the values from the database and updates the board
 if (db.doCommand("SELECT Player1Hist.Player1Ships,Player2Ships, Player1Hist.Player1Fire, Player2Fire FROM Player1Hist,Player2Hist") == DB_SUCCESS) 
   {  	
   nRows = db.numRows();
@@ -35,6 +37,7 @@ if (db.doCommand("SELECT Player1Hist.Player1Ships,Player2Ships, Player1Hist.Play
    	 cout << "ERROR\nThere was a problem with our database. Try again later." << endl;
    	 exit(0);
     }
+//closes the database
 db.close();
 }
 
@@ -43,7 +46,7 @@ int main()
 {
 ofstream ofl;
 ifstream ifl;
-string p1ships, p1fire, p2ships, p2fire,turn;
+string p1ships, p1fire, p2ships, p2fire, turn;
 turn = 1;
 sqltWrap db;
 
@@ -59,11 +62,13 @@ db.open("battleshiphist");
 //getline(cin,userName);
 //getline(cin,newField);
 //getline(cin,post);
+//read in the values from the html
 getline(cin,p1ships);
 getline(cin,p1fire);
 getline(cin,p2ships);
 getline(cin,p2fire);
 
+//Next, inserts the values into the database
 //player1HistoryINSERTS
 //if(turn = 1)
 //{
@@ -95,7 +100,8 @@ getline(cin,p2fire);
     	}
 	turn = 1;
 //}
-	
+
+//after the shots and ships are inserted into the table, the board needs to be refreshed.
 refreshBoard();//runs the refreshBoard function
 
 return 0;
