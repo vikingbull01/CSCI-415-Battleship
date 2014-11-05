@@ -21,7 +21,7 @@ sqltWrap db;
 db.open("battleshiphist");
 
 //gets the values from the database and updates the board
-if (db.doCommand("SELECT Player1Hist.Player1Ships,Player2Ships, Player1Hist.Player1Fire, Player2Fire FROM Player1Hist,Player2Hist") == DB_SUCCESS) 
+if (db.doCommand("SELECT Player1Hist.Player1Ships, Player2Hist.Player2Ships, Player1Hist.Player1Fire, Player2Hist.Player2Fire FROM Player1Hist, Player2Hist") == DB_SUCCESS) 
   {  	
   nRows = db.numRows();
   cout << "SUCCESS" << endl;
