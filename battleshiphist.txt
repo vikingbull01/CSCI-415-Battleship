@@ -2,18 +2,18 @@ CREATE TABLE Player1Hist
 (
 	Player1Ships varchar(4),
 	Player1Fire varchar(4),
-	Player1Hits varchar(4)
+	Player1Hits varchar(4);
 );
 
 CREATE TABLE Player2Hist
 (	
 	Player2Ships varchar(4),
 	Player2Fire varchar(4),
-	Player2Hits varchar(4)
+	Player2Hits varchar(4);
 );
 
 CREATE TABLE Hits
 (	
 	P1Hits varchar(4),
-	P2Hits varchar(4)
+	P2Hits varchar(4);
 );
