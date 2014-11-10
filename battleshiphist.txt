@@ -1,13 +1,10 @@
 CREATE TABLE Player1Hist
 (
 	Player1Ships varchar(4),
-<<<<<<< HEAD
 	Fire varchar(4),
 	Hits varchar(4);
-=======
 	Player1Fire varchar(4),
 	Player1Hits varchar(4)
->>>>>>> FETCH_HEAD
 );
 
 CREATE TABLE Player2Hist
@@ -20,11 +17,20 @@ CREATE TABLE Player2Hist
 CREATE TABLE Hits
 (	
 	P1Hits varchar(4),
-<<<<<<< HEAD
 	P2Hits varchar(4);
 );
 
-=======
 	P2Hits varchar(4)
 );
->>>>>>> FETCH_HEAD
+
+
+CREATE TABLE Color
+(
+black,
+red,
+pink,
+blue,
+
+);
+
+
