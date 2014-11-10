@@ -17,3 +17,13 @@ CREATE TABLE Hits
 	P1Hits varchar(4),
 	P2Hits varchar(4)
 );
+
+CREATE TABLE Color
+(
+black,
+red,
+pink,
+blue,
+
+);
+
