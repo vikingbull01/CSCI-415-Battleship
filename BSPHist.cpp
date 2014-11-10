@@ -65,14 +65,16 @@ db.open("battleshiphist");
 //read in the values from the html
 getline(cin,p1ships);
 getline(cin,p1fire);
+getline(cin,p1misses);
 getline(cin,p2ships);
 getline(cin,p2fire);
+getline(cin,p2misses);
 
 //Next, inserts the values into the database
 //player1HistoryINSERTS
 //if(turn = 1)
 //{
-	if (db.doCommand("INSERT INTO Player1Hist (Player1Ships, Player1Fire) VALUES ('" + p1ships + "','" + p1fire + "')") == DB_SUCCESS) 
+	if (db.doCommand("INSERT INTO Player1Hist (Player1Ships, Player1Fire, Player1Misses) VALUES ('" + p1ships + "','" + p1fire + "','" + p1misses + "')") == DB_SUCCESS) 
   		{
    			// cout << "SUCCESS\nDebugging test.............................................\n" << endl;
      
@@ -88,7 +90,7 @@ getline(cin,p2fire);
 //player2HistoryINSERTS
 //else
 //{
-	if (db.doCommand("INSERT INTO Player2Hist (Player2Ships, Player2Fire) VALUES ('" + p2ships + "','" + p2fire + "')") == DB_SUCCESS) 
+	if (db.doCommand("INSERT INTO Player2Hist (Player2Ships, Player2Fire, Player2Misses) VALUES ('" + p2ships + "','" + p2fire + "','" + p2misses + "')") == DB_SUCCESS) 
   		{
    			// cout << "SUCCESS\nDebugging test.............................................\n" << endl;
      
