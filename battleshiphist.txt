@@ -1,24 +1,28 @@
 --Player 1 info
 CREATE TABLE Player1Hist
 (
-	Player1Ships varchar(4),
-	Player1Fire varchar(4),
-	Player1Hits varchar(4)
+	Player1Ships VARCHAR(4),
+	Player1Fire VARCHAR(4),
+	Player1Hits VARCHAR(4),
+	Player1Misses VARCHAR(4)
 );
 
 --Player 2 info
 CREATE TABLE Player2Hist
 (	
-	Player2Ships varchar(4),
-	Player2Fire varchar(4),
-	Player2Hits varchar(4)
+	Player2Ships VARCHAR(4),
+	Player2Fire VARCHAR(4),
+	Player2Hits VARCHAR(4),
+	Player2Misses VARCHAR(4)
 );
 
 --Hits table
-CREATE TABLE Hits
+CREATE TABLE HitsAndMisses
 (	
-	P1Hits varchar(4),
-	P2Hits varchar(4);
+	P1Hits VARCHAR(4),
+	P2Hits VARCHAR(4),
+	P1Misses VARCHAR(4),
+	P2Misses VARCHAR(4)
 );
 
 --Colors table to identify actions/squares
@@ -30,11 +34,11 @@ CREATE TABLE Hits
 --white for blank area or nothing in it
 CREATE TABLE Color
 (
-black,
-gray,
-red,
-pink,
-blue,
-white
+black VARCHAR(4),
+gray VARCHAR(4),
+red VARCHAR(4),
+pink VARCHAR(4),
+blue VARCHAR(4),
+white VARCHAR(4)
 );
 
