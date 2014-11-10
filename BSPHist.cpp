@@ -46,7 +46,7 @@ int main()
 {
 ofstream ofl;
 ifstream ifl;
-string p1ships, p1fire, p2ships, p2fire, turn;
+string p1ships, p1fire, p2ships, p2fire, p1misses, p2misses, turn;
 turn = 1;
 sqltWrap db;
 
