@@ -1,12 +1,12 @@
+--Player 1 info
 CREATE TABLE Player1Hist
 (
 	Player1Ships varchar(4),
-	Fire varchar(4),
-	Hits varchar(4);
 	Player1Fire varchar(4),
 	Player1Hits varchar(4)
 );
 
+--Player 2 info
 CREATE TABLE Player2Hist
 (	
 	Player2Ships varchar(4),
@@ -14,23 +14,27 @@ CREATE TABLE Player2Hist
 	Player2Hits varchar(4)
 );
 
+--Hits table
 CREATE TABLE Hits
 (	
 	P1Hits varchar(4),
 	P2Hits varchar(4);
 );
 
-	P2Hits varchar(4)
-);
-
-
+--Colors table to identify actions/squares
+--Black for ship
+--gray for placed ship??
+--red for hit
+--pink for slected area to hit
+--blue for water/miss
+--white for blank area or nothing in it
 CREATE TABLE Color
 (
 black,
+gray,
 red,
 pink,
 blue,
-
+white
 );
-
 
