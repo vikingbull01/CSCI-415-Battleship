@@ -41,7 +41,7 @@ if (db.doCommand("SELECT Player1Hist.Player1Ships, Player2Hist.Player2Ships, Pla
     }
 //closes the database
 db.close();
-}
+}//end refreshBoard Function
 
 
 int main()
@@ -109,4 +109,4 @@ getline(cin,p2misses);
 refreshBoard();//runs the refreshBoard function
 
 return 0;
-}
+}// end main function
