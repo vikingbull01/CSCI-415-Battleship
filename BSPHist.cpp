@@ -24,7 +24,7 @@ sqltWrap db;
 db.open("battleshiphist");
 
 //gets the values from the database and updates the board
-if (db.doCommand("SELECT black, red,pink,blue,white FROM TableHist") == DB_SUCCESS) 
+if (db.doCommand("SELECT TableHist1.black, TableHist2.black, TableHist1.red, TableHist2.red, TableHist1.pink, TableHist2.pink, TableHist1.blue, TableHist2.blue, TableHist1.white, TableHist2.white FROM TableHist1, TableHist2") == DB_SUCCESS) 
   {  	
   nRows = db.numRows();
   cout << "SUCCESS" << endl;
@@ -40,6 +40,8 @@ if (db.doCommand("SELECT black, red,pink,blue,white FROM TableHist") == DB_SUCCE
    	 cout << "ERROR\nThere was a problem with our database. Try again later." << endl;
    	 exit(0);
     }
+	
+	
 //closes the database
 db.close();
 }//end refreshBoard Function
@@ -76,7 +78,20 @@ getline(cin,white);
 //Next, inserts the values into the database
 //player1HistoryINSERTS
 
-	if (db.doCommand("INSERT INTO Table1Hist (black, red, pink, blue, white) VALUES ('" + black + "','" + red + "','" + pink + "','" + blue + "','" + white + "')") == DB_SUCCESS) 
+	if (db.doCommand("INSERT INTO TableHist1 (black, red, pink, blue, white) VALUES ('" + black + "','" + red + "','" + pink + "','" + blue + "','" + white + "')") == DB_SUCCESS) 
+  		{
+   			// cout << "SUCCESS\nDebugging test.............................................\n" << endl;
+     
+  		}
+  	else
+   		{
+   	 		cout << "ERROR\nThere was a problem with our database. Try again later.1" << endl;
+   	 		exit(0);
+    	}
+		
+		
+//player2HistoryINSERTS
+		if (db.doCommand("INSERT INTO TableHist2 (black, red, pink, blue, white) VALUES ('" + black + "','" + red + "','" + pink + "','" + blue + "','" + white + "')") == DB_SUCCESS) 
   		{
    			// cout << "SUCCESS\nDebugging test.............................................\n" << endl;
      
