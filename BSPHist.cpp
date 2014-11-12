@@ -15,9 +15,11 @@ int refreshBoard()
 {
 string userName, userPass;
 int nRows, nCols;
+
+//This is the reference to the sqltdb.hpp file
 sqltWrap db;
 
-//opens the database
+//opens the database, whatever we name it
 db.open("battleshiphist");
 
 //gets the values from the database and updates the board
