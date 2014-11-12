@@ -1,12 +1,11 @@
 --Colors table to identify actions/squares
 --Black for ship
---gray for placing ship??
 --red for hit
---pink for slected area to hit
+--pink for selected area to hit
 --blue for water/miss
 --white for blank area or nothing in it yet
 
-CREATE TABLE TableHist
+CREATE TABLE TableHist1
 (
 black VARCHAR(4),
 red VARCHAR(4),
@@ -15,3 +14,11 @@ blue VARCHAR(4),
 white VARCHAR(4)
 );
 
+CREATE TABLE TableHist2
+(
+black VARCHAR(4),
+red VARCHAR(4),
+pink VARCHAR(4),
+blue VARCHAR(4),
+white VARCHAR(4)
+);
