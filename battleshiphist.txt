@@ -1,30 +1,3 @@
---Player 1 info
-CREATE TABLE Player1Hist
-(
-	Player1Ships VARCHAR(4),
-	Player1Fire VARCHAR(4),
-	Player1Hits VARCHAR(4),
-	Player1Misses VARCHAR(4)
-);
-
---Player 2 info
-CREATE TABLE Player2Hist
-(	
-	Player2Ships VARCHAR(4),
-	Player2Fire VARCHAR(4),
-	Player2Hits VARCHAR(4),
-	Player2Misses VARCHAR(4)
-);
-
---Hits and misses table.  this could be deleted but keeping in case we use this for something else
-CREATE TABLE HitsAndMisses
-(	
-	P1Hits VARCHAR(4),
-	P2Hits VARCHAR(4),
-	P1Misses VARCHAR(4),
-	P2Misses VARCHAR(4)
-);
-
 --Colors table to identify actions/squares
 --Black for ship
 --gray for placing ship??
@@ -32,10 +5,10 @@ CREATE TABLE HitsAndMisses
 --pink for slected area to hit
 --blue for water/miss
 --white for blank area or nothing in it yet
-CREATE TABLE Color
+
+CREATE TABLE TableHist
 (
 black VARCHAR(4),
-gray VARCHAR(4),
 red VARCHAR(4),
 pink VARCHAR(4),
 blue VARCHAR(4),
