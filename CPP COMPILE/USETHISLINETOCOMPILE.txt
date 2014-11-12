@@ -1,0 +1,6 @@
+ g++ -std=c++11 BSPHist.cpp -o BSPHist.cgi sqltdb.o infoFromHub.o  -lsqlite3
+ 
+ 
+ --sqltdb.o is the database general mod
+ --infofromhub.o is the script randy made that gets the game instance
+ -- -lsqlite3 is the database library
