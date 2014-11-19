@@ -28,8 +28,6 @@ function sendShots(cellNumber)
 	$eid("s" + cellNumber).style.backgroundColor = "red";
 }
 
-
-
 function setShipNorth(ev)
 {
 	var str = ev.target.id;
