@@ -57,10 +57,10 @@ if (db.doCommand("SELECT TableHist1.black, TableHist2.black, TableHist1.red, Tab
 //closes the database
 //this might be correct, 
 //this is the actual delete function:     DELETE * FROM TableHist1, TableHist2;
-if(db.doCommand("DELETE * FROM TableHist1, TableHist2;") == DB_SUCCESS)
+/*if(db.doCommand("DELETE * FROM TableHist1, TableHist2;") == DB_SUCCESS)
 {
 db.close();
-}
+}*/
 }//end refreshBoard Function
 
 
