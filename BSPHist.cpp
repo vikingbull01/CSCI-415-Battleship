@@ -32,7 +32,7 @@ UNION ALL
 SELECT black, red, pink, blue, white FROM TableHist2;
 
 
-UNION ALL essentially gets the data from similar columns/tables/rows. same thing as what we have done below but mre refined.  
+UNION ALL essentially gets the data from similar columns/tables/rows. same thing as what we have done below but more refined.  
 **/
 
 //gets the values from the database and updates the board
