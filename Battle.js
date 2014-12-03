@@ -361,6 +361,28 @@ function sendAttack()
 			$eid("s" + shot1).style.backgroundColor = "blue";
 		}
 	}
+	else if (NumberShots == "2")
+	{
+		if($eid("s" + shot1).style.backgroundColor == "black")
+		{
+			$eid("m" + shot1).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+		}
+		else if($eid("s" + shot2).style.backgroundColor == "black")
+		{
+			$eid("m" + shot1).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+			$eid("m" + shot2).style.backgroundColor = "pink";
+		}
+		else
+		{
+			$eid("m" + shot1).style.backgroundColor = "blue";
+			$eid("m" + shot2).style.backgroundColor = "blue";
+			$eid("s" + shot1).style.backgroundColor = "blue";
+			$eid("s" + shot2).style.backgroundColor = "blue";
+		}
+	}
 	else
 	{
 		if($eid("s" + shot1).style.backgroundColor == "black")
@@ -400,7 +422,7 @@ var str = ev.target.id;
 if (ev.target.id == "brd2")
 	alert ("You aren't going to hit anything there!!");
 else if ((getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)") || ($eid(str).style.backgroundColor == "pink"))
-   {
+    {
 	if(document.winner != null)
 	{
 		alert("Player" + document.winner + " already won the game!!!!")
@@ -449,12 +471,6 @@ else if ((getComputedStyle(ev.target).backgroundColor == "rgba(0, 0, 0, 0)") || 
 }
 
 //****************************************
-window.onload = function()
-{
-var choice = prompt("Are you player 1 or Player 2?");
-}
-
-//*********************
 
 function beginAttacks()
 {
@@ -505,6 +521,11 @@ function webServerError(status, statusText, area)
 		area.innerHTML = "Web Server Error with status number: " + status + " and Status Text: " + statusText;
 	}
 	
+window.onload = function()
+{
+$eid("brd2").addEventListener('mousedown', cellClick);
+}
+
 function sendShipData()
 {
 	var blackPlace = "",
@@ -513,7 +534,7 @@ function sendShipData()
 		pinkPlace = "",
 		whitePlace = "";
 	
-	for (int i = 0; i < 100; i++)
+	for (var i = 0; i < 100; i++)
 	{
 		if ($eid("s" + i).style.backgroundColor == "black")
 			blackPlace += '|' + i;
@@ -528,8 +549,38 @@ function sendShipData()
 	}
 	
 	var data;
-	data = blackPlace;
+	data = "blackPlace " + blackPlace;
+	
+	ajaxRequestPost("test.cgi", data, "text/plain", true, document.getElementById("brd"),document.getElementById("brd"), sucessPlaceShip, webServerError);
+
+	data = "redPlace " + redPlace;
 	
 	ajaxRequestPost("test.cgi", data, "text/plain", true, document.getElementById("brd"),document.getElementById("brd"), sucessPlaceShip, webServerError);
 	
+	data = "bluePlace " + bluePlace;
+	
+	ajaxRequestPost("test.cgi", data, "text/plain", true, document.getElementById("brd"),document.getElementById("brd"), sucessPlaceShip, webServerError);
+
+	data = "pinkPlace " + pinkPlace;
+	
+	ajaxRequestPost("test.cgi", data, "text/plain", true, document.getElementById("brd"),document.getElementById("brd"), sucessPlaceShip, webServerError);
+
+	data = "whitePlace " + whitePlace;
+	
+	ajaxRequestPost("test.cgi", data, "text/plain", true, document.getElementById("brd"),document.getElementById("brd"), sucessPlaceShip, webServerError);
 }
+
+function sucessPlaceShip()
+{
+alert("Data sent sucessfully.");
+}
+
+function successFunc(wall, area)
+{
+	alert(wall + " data was sent back to get to " + area);
+}
+	
+function webServerError(status, statusText, area)
+	{
+		alert("Web Server Error with status number: " + status + " and Status Text: " + statusText);
+	}
