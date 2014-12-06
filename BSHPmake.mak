@@ -19,7 +19,7 @@ welcomeBSHP.o: welcomeBSHP.cpp infoFromHub.hpp
 # Compilation of general module used by scripts
 # ###########################################
 
-infoFromHub.o: infoFromHub.cpp 
+infoFromHub.o: infoFromHub.cpp infoFromHub.hpp
 	g++ -c infoFromHub.cpp
 	
 
